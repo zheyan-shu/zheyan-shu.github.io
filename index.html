@@ -40,6 +40,22 @@
             bottom: 0;
             width: 100%;
         }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d9e412;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        section {
+            padding: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -48,21 +64,30 @@
     <h1>Welcome to My Website</h1>
 </header>
 
-<div class="container">
-    <!-- 在这里可以添加你的内容 -->
-    <h2 style="color: #12d7a9f7;">Description</h2>
-    <p>This is my first try to build my own website. I just want to use it to share my notes.</p>
-</div>
+<nav>
+    <a href="https://zheyan-shu.github.io">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
 
-<div class="container">
+<section>
+    <h2 style="color: #12d7a9f7;">Description</h2>
+    <p style="color: #eae4e4;">This is my first try to build my own website. I just want to use it to share my notes.</p>
+</section>
+
+<section>
     <!-- 在这里可以添加你的内容 -->
     <h2 style="color: #12d7a9f7;">Gauge theory notes</h2>
-    <p>Here is the note of David Tong. I place it here as a test</p>
-    <iframe src="gt.pdf" width="60%" height="500px" frameborder="0"></iframe>
-</div>
+    <p style="color: #eae4e4;">Here is the note of David Tong. I place it here as a test</p>
+    <iframe src="gt.pdf" width="50%" height="300px " justify-content="center" frameborder="1"></iframe>
+<section>
+
+
+
 
 <footer>
-    <p>&copy; 2024 Zheyan. All rights reserved.</p>
+    <p style="font-size:x-small;">&copy; 2024 Zheyan. All rights reserved.</p>
 </footer>
 
 </body>
