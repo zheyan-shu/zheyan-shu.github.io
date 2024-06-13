@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zheyan</title> 
-    <style>
-        /* 在这里可以添加 CSS 样式 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            background-color: #eae4e4;
-            color: #ea8913;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #fffffff7;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #ec0d0d;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #d9e412;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-        }
-        section {
-            padding: 20px;
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to My Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    header {
+        background-color: #333;
+        color: #f0f0f0;
+        padding: 20px 0;
+        text-align: center;
+    }
+    nav {
+        background-color: #444;
+        overflow: hidden;
+    }
+    nav a {
+        float: left;
+        display: block;
+        color: #f0f0f0;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    nav a:hover {
+        background-color: #555;
+        color: #f0f0f0;
+    }
+    section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #12d7a9;
+    }
+    p {
+        color: #333;
+    }
+    iframe {
+        display: block;
+        margin: 10px auto;
+    }
+</style>
 </head>
 <body>
 
@@ -69,28 +67,27 @@
 </nav>
 
 <section>
-    <h2 style="color: #12d7a9f7;">Description</h2>
+    <h2>Description</h2>
     <p>This is my first try to build my own website. I just want to use it to share my notes.</p>
 </section>
 
 <section>
-    <h2 style="color: #12d7a9f7;">Gauge theory notes</h2>
+    <h2>Gauge theory notes</h2>
     <p>Here is the note of David Tong. I place it here as a test</p>
     <a href="gt.pdf" target="_blank">View PDF</a>
-    <iframe src="gt.pdf" width="100%" height="500px " justify-content="center" frameborder="1"></iframe>
-<section>
-
-<section>
-    <h2 style="color: #12d7a9f7;">Lie Group and Lie algebra for 2024 SPRING</h2>
-    <p>This semister I took the class of Prof.Wang. Here is his lecture notes</p>
-    <a href="Notes.pdf" target="_blank">View PDF</a>
-    <iframe src="Notes.pdf" width="100%" height="500px " justify-content="center" frameborder="1"></iframe>
+    <iframe src="gt.pdf" width="100%" height="500px" frameborder="1"></iframe>
 </section>
 
-    
-<footer>
-    <p style="font-size:x-small;">&copy; 2024 Zheyan. All rights reserved.</p>
-</footer>
+<section>
+    <h2>Lie Group and Lie algebra for 2024 SPRING</h2>
+    <p>This semester I took the class of Prof. Wang. Here is his lecture notes</p>
+    <a href="Notes.pdf" target="_blank">View PDF</a>
+    <iframe src="Notes.pdf" width="100%" height="500px" frameborder="1"></iframe>
+</section>
+
+<script>
+    // 可选：如果需要实现无限滚动加载，可以在这里添加相关的 JavaScript 代码
+</script>
 
 </body>
 </html>
