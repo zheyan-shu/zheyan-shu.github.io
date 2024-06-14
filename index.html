@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to My Website</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-    }
-    header {
-        background-color: #333;
-        color: #f0f0f0;
-        padding: 20px 0;
-        text-align: center;
-    }
-    nav {
-        background-color: #444;
-        overflow: hidden;
-    }
-    nav a {
-        float: left;
-        display: block;
-        color: #f0f0f0;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-    }
-    nav a:hover {
-        background-color: #555;
-        color: #f0f0f0;
-    }
-    section {
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-        color: #12d7a9;
-    }
-    p {
-        color: #333;
-    }
-    iframe {
-        display: block;
-        margin: 10px auto;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+            color: #f0f0f0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #12d7a9;
+        }
+        p {
+            color: #333;
+        }
+        iframe {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        function checkPasswordAndRedirect(url) {
+            var password = prompt("请输入访问密码：");
+            // 替换 'yourPassword' 为实际的密码
+            if (password === "yourPassword") {
+                window.location.href = url;
+            } else if (password !== null) { // 用户点击取消时不进行任何操作
+                alert("密码错误，请重试。");
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -62,6 +73,7 @@
 <nav style="justify-content: center;">
     <a href="https://zheyan-shu.github.io">Home</a>
     <a href="http://xhslink.com/TK4pjM">About</a>
+    <a href="#" onclick="checkPasswordAndRedirect('http://xhslink.com/TK4pjM')">Google2</a>
     <a href="http://xhslink.com/TK4pjM" target="_blank">Google</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
