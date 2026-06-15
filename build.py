@@ -22,14 +22,22 @@ for md_file, html_file in pairs:
     html = html_path.read_text()
 
     # Replace the inlined markdown string in the JS
-    replacement = f'const __md = {json.dumps(md)};'
-    new_html = re.sub(
-        r'const __md = ".*?";',
-        lambda _: replacement,
-        html,
-        count=1,
-        flags=re.DOTALL,
-    )
+    marker_start = "/* MD_START */"
+    marker_end = "/* MD_END */"
+    replacement = f'{marker_start} const __md = {json.dumps(md)}; {marker_end}'
+    if marker_start in html and marker_end in html:
+        before = html[:html.index(marker_start)]
+        after = html[html.index(marker_end) + len(marker_end):]
+        new_html = before + replacement + after
+    else:
+        # First time: replace bare const __md line
+        new_html = re.sub(
+            r'const __md = .*?;',
+            lambda _: replacement,
+            html,
+            count=1,
+            flags=re.DOTALL,
+        )
 
     if new_html == html:
         print(f"WARN {html_file}: pattern not found, nothing changed")
