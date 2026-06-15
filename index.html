@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zheyan Shu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:   #ffffff;
+  --surface: #f8f8f8;
+  --border:  #e8e8e8;
+  --text:    #111111;
+  --muted:   #888888;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ─────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+.nav-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* ── Shared ──────────────────────────────── */
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+hr.divider { border: none; border-top: 1px solid var(--border); }
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+
+/* ── Hero ────────────────────────────────── */
+.hero { padding: 100px 0 84px; }
+.hero-greeting {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(50px, 9vw, 76px);
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin-bottom: 26px;
+  color: var(--text);
+}
+.hero-bio {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ── About ───────────────────────────────── */
+.section-about { padding: 72px 0; }
+.about-body {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3a3a3a;
+  max-width: 640px;
+}
+.about-body p + p { margin-top: 22px; }
+.about-body a { color: var(--text); text-underline-offset: 3px; }
+.about-body a:hover { color: var(--muted); }
+
+/* ── Notes ───────────────────────────────── */
+.section-notes { padding: 72px 0 96px; }
+
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 40px;
+}
+.tag-btn {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.tag-btn:hover { border-color: #bbb; color: var(--text); }
+.tag-btn.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+/* Notes list */
+.notes-list { border-top: 1px solid var(--border); }
+.note-card {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--border);
+  padding: 26px 0;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0 28px;
+  transition: opacity 0.2s;
+}
+.note-card.hidden { display: none; }
+.note-card:hover .note-title { color: var(--muted); }
+.note-sidebar {
+  padding-top: 2px;
+}
+.note-tag {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.note-date {
+  font-size: 12px;
+  color: #bbb;
+}
+.note-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  color: var(--text);
+  transition: color 0.15s;
+}
+.note-excerpt {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.note-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.note-links a {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 10px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.note-links a:hover { color: var(--text); border-color: #bbb; }
+
+/* ── Footer ──────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 24px;
+}
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 560px) {
+  .hero { padding: 64px 0 56px; }
+  .hero-bio { font-size: 16px; }
+  .section-about, .section-notes { padding: 56px 0; }
+  .note-card {
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+  }
+  .note-sidebar { display: flex; gap: 10px; align-items: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-name">Zheyan Shu</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#notes">Notes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<div class="container">
+  <div class="hero">
+    <p class="hero-greeting">Hello</p>
+    <h1 class="hero-name">Zheyan Shu</h1>
+    <p class="hero-bio">Physics undergraduate at Peking University, working on quantum field theory, string theory, and quantum gravity.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ── About ── -->
+<div class="container">
+  <section class="section-about" id="about">
+    <p class="section-label">About</p>
+    <div class="about-body">
+      <p>I'm a fourth-year physics undergraduate at Peking University (BSc. expected July 2026), interested in quantum field theory, string theory, holography, and quantum gravity.</p>
+      <p>Currently I'm working with Prof. Chi-Ming Chang at YMSC, Tsinghua on fortuitous states and operators in 3d superconformal theories. Before that I spent two years with Prof. Hua Xing Zhu at PKU computing energy-energy correlations and angular distributions in collider physics, which led to a publication in JHEP.</p>
+      <p>You can reach me at <a href="mailto:zheyan@stu.pku.edu.cn">zheyan@stu.pku.edu.cn</a>.</p>
+    </div>
+  </section>
+</div>
+
+<hr class="divider">
+
+<!-- ── Notes ── -->
+<div class="container">
+  <section class="section-notes" id="notes">
+    <p class="section-label">Notes</p>
+
+    <div class="tag-filter" id="tagFilter">
+      <button class="tag-btn active" data-tag="all">All</button>
+      <button class="tag-btn" data-tag="condensed-matter">Condensed Matter</button>
+      <button class="tag-btn" data-tag="high-energy">High Energy</button>
+    </div>
+
+    <div class="notes-list" id="notesList">
+
+      <a class="note-card" href="notes/solid-state-theory.html" data-tag="condensed-matter">
+        <div class="note-sidebar">
+          <span class="note-tag">Condensed Matter</span>
+          <span class="note-date">Spring 2026</span>
+        </div>
+        <div>
+          <div class="note-title">Note on Solid State Theory</div>
+          <div class="note-excerpt">Notes on the Quantum Hall Effect following David Tong's lecture notes, with additional material from Yu-An Chen's Solid State Theory course at PKU.</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <span>Zheyan Shu</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+  const tagBtns = document.querySelectorAll('.tag-btn');
+  const noteCards = document.querySelectorAll('.note-card');
+
+  tagBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tagBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selected = btn.dataset.tag;
+
+      noteCards.forEach(card => {
+        if (selected === 'all' || card.dataset.tag === selected) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
