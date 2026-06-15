@@ -1,6 +1,6 @@
 # An Aside: Quantum Computing
 
-## Some Conventions {#some-conventions .unnumbered}
+## Some Conventions
 
 $$X = \begin{bmatrix}
         0 & 1\\
@@ -21,7 +21,7 @@ $$\sigma^- = \frac{1}{2}(X-iY) \quad \sigma^+ = \frac{1}{2}(X+iY)$$
 
 ## Quantum Error Correction
 
-### Parent Hamiltonian {#parent-hamiltonian .unnumbered}
+### Parent Hamiltonian
 
 Parent Hamiltonian defines an energy framework that ground state
 represents error-free states. In the case of a three-qubit repetition
@@ -31,13 +31,13 @@ $$
 $$
 where $Z_1Z_2$ and $Z_2Z_3$ are called *stabilizers*.
 
-### Ground states {#ground-states .unnumbered}
+### Ground states
 
 There is a two-fold degeneracy of ground states, denoted as
 $\ket{0}=\ket{000}$ and $\ket{1}=\ket{111}$ Any derivation of ground
 states would increase the energy of this system.
 
-### Logical operators {#logical-operators .unnumbered}
+### Logical operators
 
 Logical operators are defined such that they are non-trivial map on the
 code space. They are defined by modulo out stabilizers, which implies if
@@ -131,7 +131,7 @@ $$
 that is related with Berry curvature via
 $V_{ni} = \epsilon_{ijk}F_{jk}$.
 
-## A two-level system {#a-two-level-system .unnumbered}
+## A two-level system
 
 Consider following Hamiltonian 
 $$
@@ -177,11 +177,11 @@ $$
 $$ 
 Then $\mathbf{V}_+$ is computed by
 
-# The Integer Quantum Hall Effect {#sec:IQHE}
+# The Integer Quantum Hall Effect
 
 In this section, we would like to discuss *the integer quantum Hall effect* first.
 
-## Laudau levels {#laudau-levels .unnumbered}
+## Laudau levels
 
 [Briefly discuss Laudau levels]{style="color: blue"}
 
@@ -448,7 +448,7 @@ twisted boundary conditions, which need to be averaged when we want
 physical obervable conductivity.
 :::
 
-## Laughlin's argument {#laughlins-argument .unnumbered}
+## Laughlin's argument
 
 We briefly discuss Laughlin's argument for quantized Hall effect. We
 adopt Laudau's gauge 
