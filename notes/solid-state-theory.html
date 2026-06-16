@@ -306,20 +306,54 @@ footer { border-top: 1px solid var(--border); padding: 28px 24px; }
 </footer>
 
 <script>
+  const katexMacros = {
+    '\\ket': '\\left|#1\\right\\rangle',
+    '\\bra': '\\left\\langle#1\\right|',
+    '\\braket': '\\left\\langle#1\\middle|#2\\right\\rangle',
+    '\\ham': '\\mathcal{H}',
+    '\\vect': '\\mathbf{#1}',
+    '\\wb': '\\omega_B',
+    '\\kb': 'k_\\mathrm{B}',
+    '\\efermi': 'E_\\mathrm{F}',
+    '\\bz': '\\mathrm{BZ}',
+  };
+
+  const katexOptions = {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    macros: katexMacros,
+    throwOnError: false
+  };
+
+  function renderNote(md) {
+    // Protect math blocks from marked's escaping
+    const mathBlocks = [];
+    md = md.replace(/\$\$[\s\S]*?\$\$/g, m => {
+      mathBlocks.push(m);
+      return `@@MATH${mathBlocks.length - 1}@@`;
+    });
+    md = md.replace(/\$[^\$\n]+?\$/g, m => {
+      mathBlocks.push(m);
+      return `@@MATH${mathBlocks.length - 1}@@`;
+    });
+
+    // Parse markdown
+    let html = marked.parse(md);
+
+    // Restore math blocks
+    html = html.replace(/@@MATH(\d+)@@/g, (_, i) => mathBlocks[i]);
+
+    document.getElementById('note-content').innerHTML = html;
+    renderMathInElement(document.getElementById('note-content'), katexOptions);
+  }
+
   fetch('solid-state-theory.md')
     .then(r => r.text())
-    .then(md => {
-      document.getElementById('note-content').innerHTML = marked.parse(md);
-      renderMathInElement(document.getElementById('note-content'), {
-        delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$',  right: '$',  display: false},
-          {left: '\\[', right: '\\]', display: true},
-          {left: '\\(', right: '\\)', display: false}
-        ],
-        throwOnError: false
-      });
-    });
+    .then(renderNote);
 </script>
 
 </body>
