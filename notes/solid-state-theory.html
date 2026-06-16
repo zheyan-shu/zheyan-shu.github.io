@@ -6,20 +6,9 @@
 <title>Note on Solid State Theory — Zheyan Shu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<!-- KaTeX for math rendering -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.getElementById('note-content'), {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\[', right: '\\]', display: true},
-      {left: '\\(', right: '\\)', display: false}
-    ],
-    throwOnError: false
-  });"></script>
-<!-- marked.js for markdown rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,7 +36,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Nav ── */
 nav {
   position: sticky;
   top: 0;
@@ -84,10 +72,8 @@ nav {
 }
 .nav-links a:hover { color: var(--text); }
 
-/* ── Page layout ── */
 .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 
-/* ── Note header ── */
 .note-header { padding: 72px 0 48px; }
 .back-link {
   display: inline-flex;
@@ -125,7 +111,6 @@ nav {
   margin-bottom: 32px;
 }
 
-/* ── Download bar ── */
 .download-bar {
   display: flex;
   gap: 10px;
@@ -159,7 +144,6 @@ nav {
 .download-btn:hover { background: var(--surface); border-color: #bbb; }
 .download-btn svg { width: 13px; height: 13px; opacity: 0.6; }
 
-/* ── Note body (markdown rendered) ── */
 #note-content {
   font-size: 16px;
   line-height: 1.85;
@@ -167,7 +151,7 @@ nav {
   padding-bottom: 96px;
 }
 
-#note-content h1 { display: none; } /* title already shown in header */
+#note-content h1 { display: none; }
 
 #note-content h2 {
   font-family: var(--font-display);
@@ -226,24 +210,11 @@ nav {
   overflow-x: auto;
   margin-bottom: 24px;
 }
-#note-content pre code {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 13px;
-}
+#note-content pre code { background: none; border: none; padding: 0; font-size: 13px; }
 
-/* Display math */
-#note-content .katex-display {
-  margin: 28px 0;
-  overflow-x: auto;
-}
+#note-content .katex-display { margin: 28px 0; overflow-x: auto; }
 
-#note-content hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 40px 0;
-}
+#note-content hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 #note-content table {
   width: 100%;
@@ -258,11 +229,7 @@ nav {
 }
 #note-content th { background: var(--surface); font-weight: 500; }
 
-/* ── Footer ── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 28px 24px;
-}
+footer { border-top: 1px solid var(--border); padding: 28px 24px; }
 .footer-inner {
   max-width: 720px;
   margin: 0 auto;
@@ -285,7 +252,6 @@ footer {
 </head>
 <body>
 
-<!-- ── Navigation ── -->
 <nav>
   <div class="nav-inner">
     <a href="../index.html" class="nav-name">Zheyan Shu</a>
@@ -296,7 +262,6 @@ footer {
   </div>
 </nav>
 
-<!-- ── Note header ── -->
 <div class="container">
   <div class="note-header">
     <a href="../index.html#notes" class="back-link">
@@ -327,14 +292,12 @@ footer {
   </div>
 </div>
 
-<!-- ── Note content ── -->
 <div class="container">
   <div id="note-content">
-    <p style="color: var(--muted); font-size: 14px;">Loading note…</p>
+    <p style="color: var(--muted); font-size: 14px;">Loading…</p>
   </div>
 </div>
 
-<!-- ── Footer ── -->
 <footer>
   <div class="footer-inner">
     <span>Zheyan Shu</span>
@@ -350,377 +313,13 @@ footer {
       renderMathInElement(document.getElementById('note-content'), {
         delimiters: [
           {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
+          {left: '$',  right: '$',  display: false},
           {left: '\\[', right: '\\]', display: true},
           {left: '\\(', right: '\\)', display: false}
         ],
         throwOnError: false
       });
     });
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.getElementById('note-content'), {
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\[', right: '\\]', display: true},
-      {left: '\\(', right: '\\)', display: false}
-    ],
-    throwOnError: false
-  });"></script>
-<!-- marked.js for markdown rendering -->
-<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --white:   #ffffff;
-  --surface: #f8f8f8;
-  --border:  #e8e8e8;
-  --text:    #111111;
-  --muted:   #888888;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --font-mono:    'SFMono-Regular', Consolas, monospace;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--font-body);
-  background: var(--white);
-  color: var(--text);
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── Nav ── */
-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
-  padding: 0 24px;
-}
-.nav-inner {
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 54px;
-}
-.nav-name {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text);
-  text-decoration: none;
-  letter-spacing: 0.01em;
-}
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-.nav-links a:hover { color: var(--text); }
-
-/* ── Page layout ── */
-.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-
-/* ── Note header ── */
-.note-header { padding: 72px 0 48px; }
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--muted);
-  text-decoration: none;
-  margin-bottom: 32px;
-  transition: color 0.15s;
-}
-.back-link:hover { color: var(--text); }
-.back-link svg { width: 14px; height: 14px; }
-
-.note-meta {
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 14px;
-}
-.note-title {
-  font-family: var(--font-display);
-  font-size: clamp(32px, 6vw, 48px);
-  font-weight: 300;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-.note-abstract {
-  font-size: 16px;
-  color: #3a3a3a;
-  line-height: 1.75;
-  max-width: 600px;
-  margin-bottom: 32px;
-}
-
-/* ── Download bar ── */
-.download-bar {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 16px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 56px;
-}
-.download-label {
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-right: 4px;
-}
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 5px 14px;
-  transition: background 0.15s, border-color 0.15s;
-}
-.download-btn:hover { background: var(--surface); border-color: #bbb; }
-.download-btn svg { width: 13px; height: 13px; opacity: 0.6; }
-
-/* ── Note body (markdown rendered) ── */
-#note-content {
-  font-size: 16px;
-  line-height: 1.85;
-  color: #2a2a2a;
-  padding-bottom: 96px;
-}
-
-#note-content h1 { display: none; } /* title already shown in header */
-
-#note-content h2 {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 400;
-  margin: 52px 0 18px;
-  letter-spacing: -0.01em;
-  color: var(--text);
-}
-#note-content h3 {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 36px 0 12px;
-  color: var(--text);
-}
-#note-content h4 {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 28px 0 10px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-#note-content p { margin-bottom: 18px; }
-#note-content p:last-child { margin-bottom: 0; }
-
-#note-content a { color: var(--text); text-underline-offset: 3px; }
-#note-content a:hover { color: var(--muted); }
-
-#note-content ul, #note-content ol {
-  padding-left: 24px;
-  margin-bottom: 18px;
-}
-#note-content li { margin-bottom: 6px; }
-
-#note-content blockquote {
-  border-left: 2px solid var(--border);
-  padding-left: 20px;
-  color: var(--muted);
-  margin: 24px 0;
-}
-
-#note-content code {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 1px 5px;
-}
-#note-content pre {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 18px 20px;
-  overflow-x: auto;
-  margin-bottom: 24px;
-}
-#note-content pre code {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 13px;
-}
-
-/* Display math */
-#note-content .katex-display {
-  margin: 28px 0;
-  overflow-x: auto;
-}
-
-#note-content hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 40px 0;
-}
-
-#note-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 24px;
-  font-size: 14px;
-}
-#note-content th, #note-content td {
-  border: 1px solid var(--border);
-  padding: 8px 14px;
-  text-align: left;
-}
-#note-content th { background: var(--surface); font-weight: 500; }
-
-/* ── Footer ── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 28px 24px;
-}
-.footer-inner {
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-@media (max-width: 560px) {
-  .note-header { padding: 48px 0 32px; }
-  .download-bar { flex-wrap: wrap; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
-}
-</style>
-</head>
-<body>
-
-<!-- ── Navigation ── -->
-<nav>
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-name">Zheyan Shu</a>
-    <ul class="nav-links">
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#notes">Notes</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- ── Note header ── -->
-<div class="container">
-  <div class="note-header">
-    <a href="../index.html#notes" class="back-link">
-      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M9 2L4 7l5 5"/>
-      </svg>
-      Notes
-    </a>
-    <p class="note-meta">Condensed Matter &nbsp;·&nbsp; Spring 2026</p>
-    <h1 class="note-title">Note on Solid State Theory</h1>
-    <p class="note-abstract">Notes on the Quantum Hall Effect following David Tong's lecture notes, with additional material from Yu-An Chen's Solid State Theory course at PKU.</p>
-
-    <div class="download-bar">
-      <span class="download-label">Download</span>
-      <a class="download-btn" href="solid-state-theory.pdf" download>
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M7 2v7M4 6l3 3 3-3M2 11h10"/>
-        </svg>
-        PDF
-      </a>
-      <a class="download-btn" href="solid-state-theory.tex" download>
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M2 3h10M2 7h7M2 11h5"/>
-        </svg>
-        TeX source
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ── Note content ── -->
-<div class="container">
-  <div id="note-content">
-    <p style="color: var(--muted); font-size: 14px;">Loading note…</p>
-  </div>
-</div>
-
-<!-- ── Footer ── -->
-<footer>
-  <div class="footer-inner">
-    <span>Zheyan Shu</span>
-    <span>© 2026</span>
-  </div>
-</footer>
-
-<script>
-  fetch('solid-state-theory.md')
-    .then(r => r.text())
-    .then(md => {
-      document.getElementById('note-content').innerHTML = marked.parse(md);
-      renderMathInElement(document.getElementById('note-content'), {
-        delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
-          {left: '\\[', right: '\\]', display: true},
-          {left: '\\(', right: '\\)', display: false}
-        ],
-        throwOnError: false
-      });
-    });
-  const __md = "PLACEHOLDER \n    The spin lowing and raising operators are defined by\n$$\\sigma^- = \\frac{1}{2}(X-iY) \\quad \\sigma^+ = \\frac{1}{2}(X+iY)$$\n\n## Quantum Error Correction\n\n### Parent Hamiltonian\n\nParent Hamiltonian defines an energy framework that ground state\nrepresents error-free states. In the case of a three-qubit repetition\ncode, the parent Hamiltonian is \n$$\n    H = -J(Z_1Z_2+Z_2Z_3)\n$$\nwhere $Z_1Z_2$ and $Z_2Z_3$ are called *stabilizers*.\n\n### Ground states\n\nThere is a two-fold degeneracy of ground states, denoted as\n$\\ket{0}=\\ket{000}$ and $\\ket{1}=\\ket{111}$ Any derivation of ground\nstates would increase the energy of this system.\n\n### Logical operators\n\nLogical operators are defined such that they are non-trivial map on the\ncode space. They are defined by modulo out stabilizers, which implies if\ntwo logical operators differ from each other only by a multiplication of\nstablizers, they are equivalent. In our case, \n$$\n    \\begin{aligned}\n        \\bar{X} = X_1X_2X_3 : \\bar{X}\\ket{0} = \\ket{1} \\quad \\bar{X}\\ket{1} = \\ket{0} \\\\\n        \\bar{Z} = Z_i : \\bar{Z}\\ket{0} = \\ket{0} \\quad \\bar{Z}\\ket{1} = -\\ket{1}\\\\\n    \\end{aligned}\n$$\n\n::: tcolorbox\nStabilizers are defined to construct Hamiltonian, while logical\noperators are those commute with stabilizers but acts non-trivially on\ncode space. The minimal Pauli weight of logical operators is called\n*code distance* of a quantum code.\n:::\n\n# 1D topological phenomena\n\nWe study two mathematically equivalent models, *transver field Ising\nmodel* and *Kitaev chain*. It can be shown using *Jordan-Wigner\ntransformation* the two models can be mapped from one to the other.\n\n## AKLT Model\n\nAKLT model, named after Affleck-Kennedy-Lieb-Tasaki, is defined by\nfollowing Hamiltonian \n$$\n    H = \\sum_i\\left[\\vec{S}_i\\cdot\\vec{S}_{i+1} + \\frac{1}{3} (\\vec{S}_i\\cdot\\vec{S}_{i+1})^2\\right]\n$$ \nThe exact form could be thought as any two adjacent\nspin-1 There is a non-local transform\n\n# Berry Curvature\n\nConsider a Hamiltonian with parameters varying slowly with time,\n$\\vec{R}(t)$. Those parameters could be external magnetic fields,\nelectric fields and so on. Since the system is changed adiabatically, we\nassume that an eigenstate would remain to be instaneous eigenstate as\nparameters running up to a phase factor. We define the energy eigenstate\nin the paramter space as \n$$\n    H(\\vec{R})\\ket{n(\\vec{R})} = E_n(\\vec{R})\\ket{n(\\vec{R})}\n$$ \nTherefore we write the evolving state as\n$$\n    \\ket{\\psi(t)} = e^{-\\theta(t)}\\ket{n(\\vec{R}(t))}\n$$ \nCompute the Shr\u00f6dinger equation with adiabatic ansatz,\nwe find the differential equation satisfied by phase factor,\n$$\n    E_n(\\mathbf{R}(t))-i \\hbar\\langle n(\\mathbf{R}(t))| \\frac{d}{d t}|n(\\mathbf{R}(t))\\rangle=\\hbar \\frac{d \\theta(t)}{d t} .\n$$ \nIntegrate with time, we find there are two different\ncontribution, one comes entirely from dynamical evolution, the other\narises from the geometry of parameter space. We are mostly intereted in\nthe second one, which is so-called *Berry phase*. \n$$\n    \\gamma_n = i\\int_0^t dt' \\bra{n(\\vec{R}(t'))}\\frac{d}{dt'}\\ket{n(\\vec{R}(t'))}\n$$ \nThis motivates the definition of *Berry connection*,\nwhich is defined as a one-form on the parameter space of the quantum\nsystem. \n$$\n    \\mathbf{A}_n(\\mathbf{R}) = i\\bra{n(\\mathbf{R})}\\nabla_{\\mathbf{R}}\\ket{n(\\mathbf{R})}\n$$ \nClearly, this is not gauge-invariant, where we have\ndefined the gauge transform as the arbitrary phase choice of the\neigenstates, and the story is the same as we encounter in the\nelectromagnetism. One could show that the Berry phase could be written\nin terms of Berry connection in a compact form, \n$$\n    \\gamma_n = \\oint_{\\mathcal{C}} \\mathbf{A}_n(\\mathbf{R})\\cdot d\\mathbf{R}\n$$ \nwhere we have assumed that we return to the same point\nin the parameter space. By Stoke's theorem, we may define *Berry curvature* if the space is three-dimensional, which could also be thought as the field strength, given that Berry connection being a gauge\npotential.\n\nA further computation shows that Berry phase could be put into a\ncomputationally convenient form, that is, we may compute it with\nderivatives of Hamiltonian in stead of derivatives of states.\n$$\n    \\gamma_n = -\\int_{\\mathcal{S}}d\\mathbf{S}\\cdot \\mathbf{V}_n\n$$ \nwhere $\\mathbf{V}_n$ is defined as \n$$\n    \\mathbf{V}_n = \\operatorname{Im}\\sum_{m\\neq n}\\frac{\\bra{n(\\mathbf{R})}(\\nabla_R H)\\ket{n(\\mathbf{R})} \\bra{n(\\mathbf{R})}(\\nabla_R H)\\ket{m(\\mathbf{R})}}{(E_m(\\mathbf{R})-E_n(\\mathbf{R}))^2}\n$$ \nthat is related with Berry curvature via\n$V_{ni} = \\epsilon_{ijk}F_{jk}$.\n\n## A two-level system\n\nConsider following Hamiltonian \n$$\n    H = \\mathbf{d}(\\mathbf{R})\\cdot \\sigma\n$$ \nwe have ignored contribution from identity matrix as it\nonly shifts enegies by a constant. We parametrized $\\mathbf{d}$ in\nspherical coordinate \n$$\n    \\mathbf{d}(\\mathbf{R}) = |{d}|(\\sin\\theta\\cos\\phi,\\sin\\theta\\sin\\phi,\\cos\\theta)\n$$ \nA convenient choice of eigenstates with energies\n$\\pm |d|$ is \n$$\n    \\ket{+\\mathbf{R}} = \n    \\begin{pmatrix}\n        \\cos\\frac{\\theta}{2}\\\\\n        \\sin\\frac{\\theta}{2}e^{i\\phi}\n    \\end{pmatrix}\n    \\quad\n    \\ket{-\\mathbf{R}} = \n    \\begin{pmatrix}\n        \\sin\\frac{\\theta}{2}e^{-i\\phi}\\\\\n        -\\cos\\frac{\\theta}{2}\n    \\end{pmatrix}\n$$ \nHowever, such choice of eigenstates is not well-defined\nglobally. That is, at the south pole where $\\theta = \\pi$, eigenstates may vary as $\\phi$ changes, indicating a singularity. This would not\nmake any problme as we know from differential geometry this can be\nresolved by gluing different patches on the two-sphere. The Berry\ncurvature is easy to compute and one can show it takes the same form\neven we change from one patch to the other, \n$$\n    F_{\\theta\\phi} = \\frac{1}{2}\\sin\\theta.\n$$\n\nGenerally, if we take the Cartesian coordinate system and choose\n$\\mathbf{d} = \\mathbf{R}$. Then $H = x\\sigma_x+y\\sigma_y+z\\sigma_z$.\nAssume that at a specific time, $\\mathbf{R}$ is along z-direction and\nchoose eigenstates to be the usual ones, satisfying \n$$\n    \\sigma_z\\ket{+} = \\ket{+} \\quad \\sigma_z\\ket{-} = -\\ket{-}\n$$ \nThen $\\mathbf{V}_+$ is computed by\n\n# The Integer Quantum Hall Effect\n\nIn this section, we would like to discuss *the integer quantum Hall effect* first.\n\n## Laudau levels\n\n[Briefly discuss Laudau levels]{style=\"color: blue\"}\n\n## General arguments\n\nQuantum Hall effect is that one finds that a material's Hall resistivity\ntakes special value \n$$\n    \\rho_{xy} = \\frac{2\\pi\\hbar}{e^2} \\frac{1}{\\nu} \\quad \\nu\\in \\mathbb{Z}\n$$ \nIf we compare this result with the classical\ncalculation in Drude model, in which the resistivity is found to be,\n$$\n    \\rho_{xy} = \\frac{B}{ne}\n$$ \nwhere $B$ is the external magnetic field and $n$ is the\nelectron density, one readily finds that on the $\\nu$-th plateau,\n$$\n    n = \\frac{B}{\\Phi_0}\\nu\n$$ \nwhere $\\Phi_0 = \\frac{2\\pi\\hbar}{e}$ is the flux\nquantum in the usual sense. Let us first make a comment on this\ncalculation.\n\nIndeed, this is value of magnetic field we find on the center of the\nplateau, however not enough to explain the existence of plateau. What\nwould happen when we move away from the specific value of magnetic\nfield? Given that the material is pure, there is no where for electrons\nto go if we assume $k_\\mathrm{B}T \\ll \\hbar \\omega_B$, where\n$\\hbar\\omega_B$ is the energy gap between two different Laudau levels.\nActually, this is a result of impurity of materials, thus somewhere\n*disorder* should be taken into account.\n\n#### The role of disorder, part I\n\nIt is quite easy to see why disorder may help us to solve this problem.\nMathematically, we introduce a random potential to the Hamlitonian,\nwhich effectively model the effect of disorder. We further require that\nthe impurity is not that much, so that the typical value of the random\npotential is much smaller compared with the gap, \n$$\n    V \\ll \\hbar\\omega_B.\n$$ \nIntuitively, this potential would not change the\nbehaviour of Laudau level significantly, that is, the center of each\nLaudau level would not shift, at least the leading order of such\nperturbation. However, degenerate states would split due to such general\nperturbation, since they do not preserve any symmetry of original\nHamiltonian. See fig\u00a0[1](#fig:tong_fig1){reference-type=\"ref\"\nreference=\"fig:tong_fig1\"} for an illustration.\n\n<figure id=\"fig:tong_fig1\" data-latex-placement=\"H\">\n<img src=\"tong_fig1.png\" style=\"width:80.0%\" />\n<figcaption>States in the presence of disorder</figcaption>\n</figure>\n\n#### The role of disorder, part II\n\nOn the other hand, such random potential may take *extended states* into\n*localized states*, since impurity would prevent a electron from moving\nfar away from its original position. We can easily see the emergence of\nlocalized states at the classical level. We assume that\n$$\n    |\\nabla V| \\ll \\frac{\\hbar\\omega_B}{l_B}\n$$ \nwhere $l_B$ is the magnetic radius. Recall that if we\nuse the symmetric gauge, states could be labelled by the center of the\norbit $(X,Y)$. One could again compute the commutator of them with the\nfull Hamiltonian, \n$$\n    \\begin{aligned}\n        i \\hbar \\dot{X} & =[X, H+V]=[X, V]=[X, y] \\frac{\\partial V}{\\partial y}=i l_B^2 \\frac{\\partial V}{\\partial y} \\\\\n        i \\hbar \\dot{Y} & =[Y, H+V]=[Y, V]=[Y, x] \\frac{\\partial V}{\\partial x}=-i l_B^2 \\frac{\\partial V}{\\partial x}\n\\end{aligned}\n$$ \nwhich means the center would move along the direction\nof equipotentials. So why this means we have localized states and\nextended states? First, it is easily to see states are extended without\nrandom potential as one can solve the wave function for each Laudau\nlevel and in the Laudau gauge the translation symmetry along\n$y$-direction means they are extended along this direction. Second, in\nthe existence of random potential we may assume there are local maximums\nand local minimums. States near those extrimums could only move near\nthem, as they have been trapped close to extremums due to the force of\nrandom potential. And states that have medium energy could move along\nequipotentials that expand largely in the space, thus being referred to\nextended states. See fig\u00a0[2](#fig:tong_fig2){reference-type=\"ref\"\nreference=\"fig:tong_fig2\"} for an illustration.\n\n<figure id=\"fig:tong_fig2\" data-latex-placement=\"ht\">\n<img src=\"tong_fig2.png\" style=\"width:80.0%\" />\n<figcaption>Localized states and extended states</figcaption>\n</figure>\n\nIntuitively, only extended states can transport charge from one side of\nmaterial to the other. Then as we fill all the extended states in a\ngiven Laudau level and decrease the magnetic field $B$, each Laudau\nlevel can accomodate fewer states. However rather than jump to the next\nLaudau level directly, states change from extended ones to localized\nones. That is, we have a plateau before localised states are also fully\nfilled and we may jump to the next plateau.\n\n## Topology associated with quantum Hall effect\n\nIn this subsection, we would like to relate the quantum Hall effect with\ntopology.\n\nThe first one we would like to derive is the *Kubo formula*, which\nrelates the Hall conductity with quantum observables and is part of\n*linear response*.\n\nConsider a general Hamiltonian $H_0$ with energy eigenstates\n$H_0\\ket{n} = E_n\\ket{n}$. We would like to add a background electric\nfield and work in the gauge $A_0=0$. The electric field is\n$\\mathbf{E} = -\\partial_t \\mathbf{A}$ and electrons are coupled with\nthis by adding an extra term $\\Delta H = -\\mathbf{J}\\cdot\\mathbf{A}$ to\nthe Hamiltonian. We would like to consider DC field however work with an\noccillating field. That is we take\n$\\mathbf{E}(t) = \\mathbf{E} e^{-i\\omega t}$ first and take $\\omega\\to 0$\nat the end of our calculation. For such a electric field, the gauge\npotential is given by\n$\\mathbf{A} = \\frac{\\mathbf{E}}{i\\omega}e^{-i\\omega t}$. Our goal is to\ncompute the current $\\b{\\mathbf{J}(t)}$ induced in this\ncircumstance.\n\nWe would like to work in the interacting picture, where operators evolve\nas $\\mathcal{O}(t)=e^{iH_0t/\\hbar}\\mathcal{O}(0)e^{-iH_0t/\\hbar}$ and\nstates evolve by \n$$\n    \\ket{\\psi(t)}_I = U(t,t_0)\\ket{\\psi(t_0)}_I\n$$ \nwhere the evolution operator is defined as\n$$\n    U(t,t_0) = \\operatorname{T}\\exp(-\\frac{i}{\\hbar}\\int_{t_0}^tdt' \\Delta H(t'))\n$$ \nwhere $\\operatorname{T}$ stands for the time ordering.\nThe computation is staightford. Suppose that we prepare our state in the\nmany-body ground state $\\ket{0}$ in the far-past, \n$$\n    \\begin{aligned}\n        \\langle{\\mathbf{J}(t)\\rangle} &= \\bra{0(t)}\\mathbf{J}(t)\\ket{0(t)} \\\\ \n        & = \\bra{0}U^{-1}(t)\\mathbf{J}(t)U(t)\\ket{0} \\\\\n        & \\approx \\bra{0}\\mathbf{J}(t) + \\frac{i}{\\hbar}\\int_{-\\infty}^{t}dt' [\\Delta H(t'), \\mathbf{J}(t)]\\ket{0}\n    \\end{aligned}\n$$ \nwhere $U(t)$ is the abbreviation of evolution operator\nfrom past-infinity to $t$ and we have already expand $U(t)$ to leading\norder in the last step. Each component can be shown to be brought to\nfollowing form \n$$\n    \\braket{J_i(t)}=-\\frac{1}{\\hbar \\omega}\\left(\\int_0^{\\infty} d t^{\\prime \\prime} e^{i \\omega t^{\\prime \\prime}}\\langle 0|\\left[J_j(0), J_i\\left(t^{\\prime \\prime}\\right)\\right]|0\\rangle\\right) E_j e^{-i \\omega t}.\n$$ \nFrom the above formula, it is clear that the diagonal\ncomponent of condutivity is $0$ and the off-diagonal components is\n$$\n    \\sigma_{xy}(\\omega) = -\\frac{1}{\\hbar \\omega}\\left(\\int_0^{\\infty} d t e^{i \\omega t}\\langle 0|\\left[J_j(0), J_i\\left(t\\right)\\right]|0\\rangle\\right).\n$$ \nThis is the *Kubo formula* of Hall conductivity. Use\nthe evolution of current operator we mentioned above, this could be\nexpanded using the eigenstates of $H_0$ and perform the integral over\n$\\int dt$, where an extra small imaginary part should be introduced to\nmake the integral convergent, $\\omega \\to \\omega + i\\epsilon$. The final\nresult is \n$$\n    \\sigma_{xy}(\\omega) = \\frac{i}{\\omega}\\sum_{n\\neq 0} \\frac{\\bra{0}J_y\\ket{n}\\bra{n}J_x\\ket{0}}{E_n - E_0 + \\hbar \\omega } - \\frac{\\bra{0}J_x\\ket{n}\\bra{n}J_y\\ket{0}}{\\hbar \\omega-E_n + E_0}.\n$$ \nExpand around $\\omega\\to 0$ and throw away the\ndivergent part(which would be important for the longitudinal\nconductivity however we are not going to discuss it here), we have\n$$\n    \\sigma_{x y}=-i \\hbar \\sum_{n \\neq 0} \\frac{\\langle 0| J_y|n\\rangle\\langle n| J_x|0\\rangle-\\langle 0| J_x|n\\rangle\\langle n| J_y|0\\rangle}{\\left(E_n-E_0\\right)^2}\n$$\n\nNow we are ready to discuss the topological nature of quantum Hall\neffect. Let us consider the Hall system on a torus $\\mathbf{T}^2$, which\ncan be viewed as a rectangle with opposite sites identified. First, we\ncan no longer impose periodic boundary condition for electrons due to\nthe existence of magnetic field. We introduce the *magnetic translation\noperators*, \n$$\n    T(\\mathbf{d}) = \\exp(i\\mathbf{d}\\cdot (-i\\nabla - e\\mathbf{A}/\\hbar)).\n$$ \nWe require that the state is invariant under the\ntranslation of the torus by the magnetic translation operators. However,\nit is clear that the wave function would acquire a phase when we\ntranslate it around a circle of the torus, which is also\ngauge-dependent. If we take the Laudau gauge $A_x=0, A_y = Bx$, then\n$T_x$ is the usual translation operator but\n$T_y = \\exp(y\\partial_y - iyeBx/\\hbar)$. That means when we move around\na circle along $y$-direction, the wave function would pick up a phase\n$$\n    T(0,L_y)\\psi(x,y) = \\exp(-ieBxL_y/\\hbar)\\psi(x,y+L_y) = \\psi(x,y).\n$$ \nHowever, we find that\n$T_xT_y = \\exp(-i e B L_x L_y/\\hbar) T_y T_x$. That is, the two\ntranslation operators do not commute with each other. To make them\ncommute, we require the factor to be a multiple of $2\\pi$,\n$$\n    \\frac{eBL_xL_y}{\\hbar} = 2\\pi N \\quad N \\in \\mathbb{Z},\n$$ \nwhich give rise to the Dirac quantization condition for\nmagnetic flux. It is again easy to see that we could perturb the\nHamiltonian by adding constant magnetic flux along two directions.\n$$\n    \\begin{aligned}\n        & A_x = \\frac{\\Phi_x}{L_x} \\\\\n        & A_y = \\frac{\\Phi_y}{L_y} + Bx\n    \\end{aligned}\n$$ \nThe addition Hamiltonian is\n$\\Delta = - \\sum\\limits_{i=x,y}\\frac{J_i\\Phi_i}{L_i}$. Then to the first\norder in the perturbation theory, the energy eigenstates ara given by\n$$\n    \\ket{\\psi_0}' = \\ket{\\psi_0} + \\sum_{n\\neq \\psi_0} \\frac{\\bra{n}\\Delta H\\ket{\\psi_0}}{E_n-E_0}\\ket{n}\n$$ \nConsider infinitesimal changes of $\\Phi_i$, and we\ndifferentiate above formula with respect to $\\Phi_i$, it can be shown\nthat the right-handed side takes the form of Kubo formula. In all, the\nKubo formula for Hall conductivity can be written as \n$$\n    \\sigma_{xy} = -i\\hbar \\left[\\frac{\\partial }{\\partial \\Phi_y}\\bra{\\psi_0}\\ket{\\frac{\\partial \\psi_0}{\\partial \\Phi_x}} - \\frac{\\partial }{\\partial \\Phi_x}\\bra{\\psi_0}\\ket{\\frac{\\partial \\psi_0}{\\partial \\Phi_y}}\\right]\n$$ \nAgain, we surprisingly find that it takes a very\nsimilar form with the Berry curvature in the parameter space! If we set\n$\\theta_i = \\frac{2\\pi\\Phi_i}{\\Phi_0}$ being angular variables, which\nshould take value in $[0,2\\pi)$ since the spectrum is invariant if the\nmagnetic flux is a multiple of flux quanta, being *spectual flow* that\nwe did not discuss here.\n\nIf we define the Berry connection which, in this case, lives over\n$\\mathbf{T}_{\\Phi}^2$, by \n$$\n    \\mathcal{A}_i = -i \\bra{\\psi_0} \\frac{\\partial }{\\partial \\theta_i} \\ket{\\psi_0}.\n$$ \nThe field strength can be easily computed and can be\nshown to be directly related with Hall conductivity \n$$\n    \\sigma_{xy} = -\\frac{e^2}{\\hbar}\\mathcal{F}_{xy}\n$$ \nTo see why the Hall conductivity is quantized, one\nneeds to average over the parameter space \n$$\n    \\sigma_{xy} = -\\frac{e^2}{\\hbar} \\int_{\\mathbf{T}_{\\Phi}^2}\\frac{d^2\\theta}{(2\\pi)^2}\\mathcal{F}_{xy}\n$$ \nHowever an integral of curvature over the space is\nalways a integer, which is called **Chern number**. Here the Chern\nnumber is defined by \n$$\n    C = -\\frac{1}{2\\pi} \\int_{\\mathbf{T}_{\\Phi}^2}\\frac{d^2\\theta}{(2\\pi)^2}\\mathcal{F}_{xy} \\quad \\text{and} \\quad C\\in\\mathbb{Z}\n$$ \nThe Hall conductivity is thus quantized\n$$\n    \\sigma_{xy} = \\frac{e^2}{2\\pi\\hbar} C\n$$ \nThe\nrelation\u00a0[\\[eq:tknn_inv\\]](#eq:tknn_inv){reference-type=\"eqref\"\nreference=\"eq:tknn_inv\"} is so-called *TKNN invariant*.\n\n::: tcolorbox\nIt seems hard to understand why we take an average over $\\theta$ here\nfor the first time one encounter this formula. However the physics is\nrahter simple. Terms used to perturb Hamiltonian can be thought as\ntwisted boundary conditions, which need to be averaged when we want\nphysical obervable conductivity.\n:::\n\n## Laughlin's argument\n\nWe briefly discuss Laughlin's argument for quantized Hall effect. We\nadopt Laudau's gauge \n$$A = (0,Bx,0)$$\n\nIn this gauge, the translation symmetry in $y$-direction is preserved\nand $k_y$ is a good quantum number. It can be shown that the eigenstates\nof Hamiltonian is labeled by level of occillator in $x$-direction and\n$k_y$. As one may compute directly, $k_y$ effectively shifts the center\nof occillators in $x$-direction, $\\braket{x} = -l^2 k_y$. Once we impose\nperiodic boundary condition in $y$-direction, $k_y$ is quantized\n$$\nk_y = \\frac{2\\pi n}{L_y}\n$$\nWe also have a finite length in\n$x$-direction, say $L_x$, then degeneracy of a Laudau level is given by\n$$\nN = \\frac{\\Delta k_y}{\\delta k_y} = \\frac{L_x/l^2}{2\\pi/L_y} = \\frac{A}{2\\pi l^2} = \\frac{AB}{\\Phi_0}\n$$\n\nIf we adiabatically increase flux in $z$-direction, which means\n$A_y = Bx + \\frac{\\Phi}{L_y}$, then\n$$\n\\langle x \\rangle = -l^2(k_y + \\frac{e\\Phi}{\\hbar L_y}) = -\\frac{2\\pi l^2}{L_y}(n + \\frac{\\Phi}{\\Phi_0})\n$$\nfrom which we find that if we add one unit of flux, the position of\noccillator is shifted from $n$ to $n+1$, and the system doesn't change\nbut each quantum state evovles to the next level. Thus if a Laudau level\nis full filled, then such *spectral flow* would effectively translate\none state from most inner orbit to an outer orbit, meaning one electron\nis moving. The Hall conductance can be read from following formula and\n$\\nabla\\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}$\n$$Q = \\int dt \\oint j_r dl = \\sigma_{xy}\\int dt \\oint E_\\theta dl = -\\sigma_{xy}\\Delta\\Phi$$\n*Aside: In this case if we label degenerate states in a given Laudau\nlevel by $n$ where $n=0,1,\\cdots,N-1$, then it is weird at first sight\nwhere does the most outer state move. This is explained by that the\n$n=N$ state is an edge state, which is not completely degenerate with\nbulk states.*\n\n## Topological insulators\n\nSo far so good, we have already explain the relation between quantized\nHall conductivity and topology. In this section, we would like to\ndiscuss more practical models. Let us consider particles on a lattice.\nThe first thing that one should be awared of is that now momentum should\nbe restricted in *Brillouin zone*.\n\n::: definition\n**Definition 1** (Brillouin zone). *Consider that particles are living\nin 1d space, that is $\\mathbb{R}$, the momentum eigenfunction is given\nby $e^{ikx}$ and $k$ would take value in $\\mathbb{R}$. However if we\nrestrict ourselves to 1d lattice with lattice distance $a$, such that\npartilces have quantized position $x_n=na$, then one finds that for\n$\\psi_k(x_n) = e^{ikna}$, this is invariant under $k\\to k+G$, where\n$G=\\frac{2\\pi}{a}$. Thus one can not tell the difference between $k$ and\n$k+G$, and the momentum space should modulo out such a translation. One\nmay take \n$$\n        k \\in [-\\frac{\\pi}{a},\\frac{\\pi}{a})\n$$ \nas the first Brillouin zone.*\n:::\n\nGiven the definition of Brillouin zone, we consider a particle living in\na rectangular lattice, where the lattice distance are given by $a$ and\n$b$ in $x$- and $y$-direction, repectively. The topology of momentum\nspace is a torus $\\mathbf{T}^2$ as we have the identification\n$k_x\\sim k_x+ \\frac{2\\pi}{a}$ and $k_y\\sim k_y+ \\frac{2\\pi}{b}$. In a\ngiven band, the wave function can be brought to the Bloch form\n$$\n    \\psi_{\\mathbf{k}}(\\mathbf{x}) = e^{i\\mathbf{k}\\cdot \\mathbf{x}}u_{\\mathbf{k}}(\\mathbf{x})\n$$ \nwhere $u_{\\mathbf{k}}(\\mathbf{x})$ is usually periodic\nin a unit cell. We should make several assumptions before moving into\nconcrete calculation\n\n- First, we assume that the single particle spectrum decompose into\n  bands, with each band parameterized by the momentum $\\mathbf{k}$ which\n  lives on a torus.\n\n- Second, we assume that particles are non-interacting, and the\n  multi-particle spectrum is constructed by filling up the\n  single-particle spectrum, subject to Pauli exclusion principle.\n\n- Finally, we assume that there is a energy gap between bands and there\n  exist a Fermi energy $E_F$ lives in one of these gaps. States below\n  $E_F$ are fully filled while bands above $E_F$ are empty.\n\nFor each bands that below the Fermi energy, we can do the same thing as\nabove. For each band there exist a Berry connection defined as\n$$\n    \\mathcal{A}_i(\\mathbf{k}) = -i \\bra{u_{\\mathbf{k}}} \\frac{\\partial }{\\partial k_i} \\ket{u_{\\mathbf{k}}}.\n$$ \nHere the connection is defined in the Hilber space\nitself, which is different from what we did before. Desipte of that, the\nstory goes in the usual sense. The Berry curvature associate with\n$\\mathcal{A}_i$ is \n$$\n    \\mathcal{F}_{x y}=\\frac{\\partial \\mathcal{A}_y}{\\partial k^x}-\\frac{\\partial \\mathcal{A}_x}{\\partial k^y}=i\\left\\langle\\left.\\frac{\\partial u}{\\partial k^y} \\right\\rvert\\, \\frac{\\partial u}{\\partial k^x}\\right\\rangle-i\\left\\langle\\left.\\frac{\\partial u}{\\partial k^x} \\right\\rvert\\, \\frac{\\partial u}{\\partial k^y}\\right\\rangle\n$$ \nFor each band $\\alpha$ there is an associate Chern\nnumber and the Hall conductivity is given by a summation\n$$\n    \\sigma_{xy} = \\frac{e^2}{2\\pi\\hbar}\\sum_\\alpha C_\\alpha\n$$\n\n::: proof\n*A brief proof of\nformula\u00a0[\\[eq:hall_insulator\\]](#eq:hall_insulator){reference-type=\"eqref\"\nreference=\"eq:hall_insulator\"}.* The ground state is given by a tensor\nof single-particle states below the Fermi surface, schematically\n$\\ket{\\Psi_0} = \\prod\\limits_{E_\\alpha<E_F}c_{\\alpha}(\\mathbf{k})^\\dagger\\ket{0}$.\nAn insertion of current operator between excited state and ground state\neffectively becomes\n$\\bra{u_{\\alpha}^\\mathbf{k}}J_y\\ket{u_{\\beta}^\\mathbf{k}}$.\n\nLet us look at the Sch\u00f6dinger equation of Bloch wave function, which\nreads \n$$\n        \\begin{aligned}\n            H\\left|\\psi_{\\mathbf{k}}\\right\\rangle=E_{\\mathbf{k}}\\left|\\psi_{\\mathbf{k}}\\right\\rangle & \\Rightarrow\\left(e^{-i \\mathbf{k} \\cdot \\mathbf{x}} H e^{i \\mathbf{k} \\cdot \\mathbf{x}}\\right)\\left|u_{\\mathbf{k}}\\right\\rangle=E_{\\mathbf{k}}\\left|u_{\\mathbf{k}}\\right\\rangle \\\\\n            & \\Rightarrow \\tilde{H}(\\mathbf{k})\\left|u_{\\mathbf{k}}\\right\\rangle=E_{\\mathbf{k}}\\left|u_{\\mathbf{k}}\\right\\rangle \\quad \\text { with } \\quad \\tilde{H}(\\mathbf{k})=e^{-i \\mathbf{k} \\cdot \\mathbf{x}} H e^{i \\mathbf{k} \\cdot \\mathbf{x}}\n        \\end{aligned}\n$$ \nThe current operator is defined in terms of the group\nvelocity\n$\\mathbf{J} = \\frac{e}{\\hbar} \\frac{\\partial \\tilde{H}}{\\partial \\mathbf{k}}$.\nOne can check that this perfectly match $\\mathbf{J}=e\\dot{\\mathbf{x}}$.\nNow we are left with algebraric calculation \n$$\n        \\begin{aligned}\n            \\sigma_{xy} &= -i\\hbar \\sum_{E_\\alpha<E_F<E_\\beta}\\int_{\\mathbf{T}^2}\\frac{d^2k}{(2\\pi)^2} \\frac{\\bra{u_{\\alpha}^\\mathbf{k}}J_y\\ket{u_{\\beta}^\\mathbf{k}}\\bra{u_{\\beta}^\\mathbf{k}}J_x\\ket{u_{\\alpha}^\\mathbf{k}}-\\bra{u_{\\alpha}^\\mathbf{k}}J_x\\ket{u_{\\beta}^\\mathbf{k}}\\bra{u_{\\beta}^\\mathbf{k}}J_y\\ket{u_{\\alpha}^\\mathbf{k}}}{(E_\\alpha(\\mathbf{k})-E_\\beta(\\mathbf{k}))^2} \\\\\n            &= -i\\frac{e^2}{\\hbar} \\sum_{E_\\alpha<E_F<E_\\beta}\\int_{\\mathbf{T}^2}\\frac{d^2k}{(2\\pi)^2} \\frac{\\bra{u_{\\alpha}^\\mathbf{k}}\\partial_y \\tilde{H}\\ket{u_{\\beta}^\\mathbf{k}}\\bra{u_{\\beta}^\\mathbf{k}}\\partial_x \\tilde{H}\\ket{u_{\\alpha}^\\mathbf{k}}-\\bra{u_{\\alpha}^\\mathbf{k}}\\partial_x \\tilde{H}\\ket{u_{\\beta}^\\mathbf{k}}\\bra{u_{\\beta}^\\mathbf{k}}\\partial_y \\tilde{H}\\ket{u_{\\alpha}^\\mathbf{k}}}{(E_\\alpha(\\mathbf{k})-E_\\beta(\\mathbf{k}))^2} \\\\\n            &= -i\\frac{e^2}{\\hbar} \\sum_{E_\\alpha<E_F<E_\\beta}\\int_{\\mathbf{T}^2}\\frac{d^2k}{(2\\pi)^2} \\braket{\\partial_y u_{\\alpha}^\\mathbf{k}}{u_{\\beta}^\\mathbf{k}}\\braket{u_{\\beta}^\\mathbf{k}}{\\partial_x u_{\\alpha}^\\mathbf{k}}-\\braket{\\partial_x u_{\\alpha}^\\mathbf{k}}{u_{\\beta}^\\mathbf{k}}\\braket{u_{\\beta}^\\mathbf{k}}{\\partial_y u_{\\alpha}^\\mathbf{k}} \\\\\n            &= -i\\frac{e^2}{\\hbar} \\sum_{\\alpha}\\int_{\\mathbf{T}^2}\\frac{d^2k}{(2\\pi)^2} \\braket{\\partial_y u_{\\alpha}^\\mathbf{k}}{\\partial_x u_{\\alpha}^\\mathbf{k}}-\\braket{\\partial_x u_{\\alpha}^\\mathbf{k}}{\\partial_y u_{\\alpha}^\\mathbf{k}}\n        \\end{aligned}\n$$ \nCompare the integrand with the definition of Berry\ncurvature\u00a0[\\[eq:curv_chern_ins\\]](#eq:curv_chern_ins){reference-type=\"eqref\"\nreference=\"eq:curv_chern_ins\"}, we proof the\nformula\u00a0[\\[eq:hall_insulator\\]](#eq:hall_insulator){reference-type=\"eqref\"\nreference=\"eq:hall_insulator\"}.\u00a0\u25fb\n:::\n\n#### Chern insulators\n\nThe simplest case is following single-particle Hamiltonian\u00a0(in the\nmomentum space) \n$$\n    \\tilde{H}(\\mathbf{k}) = \\vec{E}(\\mathbf{k})\\cdot \\vec{\\sigma} + \\epsilon(\\mathbf{k})\\mathbf{1}\n$$ \nThere are only two bands, each with energy\n$\\epsilon(\\mathbf{k})\\pm E(\\mathbf{k})$. For any model, we can introduce\na unit vector on the two-sphere\n$\\vec{n}(\\mathbf{k}) = \\frac{\\vec{E}(\\mathbf{k})}{|\\vec{E}(\\mathbf{k})|}$.\nClearly this induces a map from $\\mathbf{T}^2\\to\\mathbf{S}^2$. Then the\nChern number for this system could be written as \n$$\n    C = \\frac{1}{4\\pi}\\int_{\\mathbf{T}^2}k \\vec{n}\\cdot (\\frac{\\partial \\vec n}{\\partial k_x}\\times\\frac{\\partial \\vec n}{\\partial k_y})\n$$ \nThis formula effectively measures how many times\n$\\mathbf{T}^2$ wraps around $\\mathbf{S}^2$.\n\n::: tcolorbox\nLet us briefly summarize what we are studying here. For a system with a\ncompact space of momentum, we have a map from the Brillouin zone to\nparameter space, that is\n$$\\phi:\\mathbf{k}\\mapsto \\mathbf{d}(\\mathbf{k}).$$ \nSo if we want a non\nzero Chern number, each point on the two sphere must be taken at least\nonce, which means $\\mathbf{T}^2$ wraps $\\mathbf{S}^2$.\n:::\n\n#### Lattice Chern insulators\n\nConsider the symmetry allowed by crystal and the low energy effective\nphysics around small momentum region, the Hamiltonian necessarily looks\nlike \n$$\n    H = \\sin (k_x) \\sigma_x + \\sin (k_y) \\sigma_y + B(2+M-\\cos(k_x)-\\cos(k_y))\\sigma_z,\n$$ \nto the lowest order of Fourier modes.\n\n# Chern Insulators, Time Reversal Symmetry and Topological Insulators\n\n*I am not sure about the physical picture of this chapter. In a sense, I\nthink that topological phase transition is not a good desciption of the\nmain idea of this chapter.\\\nInstead, we talk about how different mass term are related with topology\nof insulators. That is, symmetry of system usually contrains possible\nterms appearing in Hamiltonian, which are responsible for gap-closing in\nthe low energy limit. So if a certain symmetry is required, a\ntopological phase may be forbidden. For example, if time reversal\nsymmetry is required, system cannot have non-zero Chern number\ngenerally, thus the Hall conductance is zero.\\\nOn the other hand, it can be shown that upon maintaining time reversal\nsymmetry, we can still have other non-trivial topological phases that\nare categorized by $\\mathbb{Z}_2$ symmetry. And they are achieved by\nadding different kinds of mass terms.*\n\n## Time reversal symmetry\n\nGenerally, time reversal symmetry would protect systems from non-trivial\ntopological phases. For spinless systems, time reversal symmetry acting\non Bloch Hamiltonian as simply changing the sign of momentum\n$$\n    T h(\\mathbf{k}) T^{-1} = h(-\\mathbf{k})\n$$ \nThen, if $\\ket{\\psi(\\mathbf{k})}$ is an eigenstate at\nmomentum $\\mathbf{k}$, $T\\ket{\\psi(\\mathbf{k})}$ is an eigenstate at\n$-\\mathbf{k}$.\n\n## Other kinds of symmetries\n\n# The Fractional Quantum Hall Effect\n\nGiven the knowledge of integer quantum Hall effect, we now come to an\nunderstanding of fractional quantum Hall effect. Indeed, the above\nargument being relavent with topology has a loophole and ultimately they\nhold only for non-interacting particles.\n\n## The Laughlin Wavefunction\n\nThe very first attmept made by physicist was Laughlin in 80' that he\nproposed an exact form of multi-particle wavefunction and obtained the\nfractional Laudau level, \n$$\n    \\nu = \\frac{1}{m}, \\quad , m\\in\\mathbb{Z}\n$$ \nActually, $m$ is an odd integer due to the Fermi-Dirac\nstatistics. As we see from solving the single-particle wavefunction at\neach Laudau level, the wavefunction may take the following form when\nworking in the symmetric gauge \n$$\n    \\psi(z_1,\\ldots,z_n)= f(z_1,\\ldots,z_n)e^{-\\sum_{i=1}^N |z_i|^2/4l_B^2}\n$$ \nwhere $z_i$ is defined as the holomorphic coordinate\nfor each particle. Laughlin proposed that the ground state wavefunction\nfor Laudau level $\\nu=\\frac{1}{m}$ is: \n$$\n    \\psi(z_i) = \\prod_{i<j}(z_i-z_j)^m e^{-\\sum_{i=1}^N |z_i|^2/4l_B^2}\n$$ \nThis is anti-symmetric when $m$ is odd. For even $m$,\nthis can be seen as the model for quantum Hall effect for bosons.\n\nWe can use some approximation to see that this function indeed give rise\nto a fractional Laudau level. Let us focus on one single particle, say\n$z_1$. Then in the pre-factor, terms containing $z_1$ are\n$$\n    \\prod_{i=1}^N(z_1-z_i)^m \\sim z_1^{m(N-1)}\n$$ \nThus from what we see from the single-particle\nwavefunction, particles now living within the maximum radius of\n$R\\approx\\sqrt{2mN}l_B$. And this implies an area of\n$A=\\pi R^2 = 2\\pi mNl_B^2$. Each Laudau level contains\u00a0$AB/\\Phi_0=mN$.\nSo states only fill a fraction of Laudau level with \n$$\n    \\nu = \\frac{1}{m}\n$$ \nas we expected.\n\nIt is quite surprising that as one solve the Shr\u00f6dinger numerically, the\nLaughlin wavefunction matches with it perfectly. However, there is no\nreason for us to believe this would match when there are $10^{11}$\nparticles. Instead, we could think that this wavefucntion lives in the\nsame *universality class* as the true ground state.\n\n#### Plasma analogy\n\nWe would like to give another physical picture for the Laughlin\nwavefunction. Consider the number density in the ground state, which is\ngiven by computing the expectation value of \n$$\n    n(z) = \\sum_{i=1}^N \\delta(z-z_i)\n$$ \nAnd this is given by \n$$\n    \\langle n(z)\\rangle = \\frac{\\int \\prod_{i=1}^N d^2z_i n(z) |\\psi(z_i)|^2}{\\int \\prod_{i=1}^N d^2z_i |\\psi(z_i)|^2}\n$$ \nHere we can interpret it as computing the partition\nfunction of a classical plasma, where the partition function is defined\nby \n$$\n    Z = \\int \\prod_{i=1}^N d^2z_i |\\psi(z_i)|^2 = \\int \\prod_{i=1}^N d^2z_i \\prod_{i<j} |z_i-z_j|^{2m} e^{-\\sum_{i=1}^N |z_i|^2/2l_B^2}\n$$ \nHowever for future convenience and a better physical\npicture, we should introduce a factor for normalization to make the\nintegrand dimensionless, that is \n$$\n    Z = \\int \\prod_{i=1}^N d^2z_i \\prod_{i<j} \\left|\\frac{z_i-z_j}{l_B}\\right|^{2m} e^{-\\sum_{i=1}^N |z_i|^2/2l_B^2}\n$$ \nIn the usual computation of partition function, the\nintegrand is given by $e^{-\\beta H}$, so here we can identify the\neffective Hamiltonian as \n$$\n    \\beta H = -2m \\sum_{i<j} \\log\\left|\\frac{z_i-z_j}{l_B}\\right| + \\sum_{i=1}^N \\frac{|z_i|^2}{2l_B^2}\n$$ \nThe first term can be interpreted as the Coulomb\ninteraction between particles in 2d space, while the second term can be\ninterpreted as a confining potential. If we set $\\beta = \\frac{2}{m}$,\nthen the effective Hamiltonian is given by \n$$\n    H = -m^2 \\sum_{i<j} \\log\\left|\\frac{z_i-z_j}{l_B}\\right| + \\sum_{i=1}^N \\frac{m}{4l_B^2}|z_i|^2\n$$ \nwhere each single particle carries a charge $m$. One\ncan easily check that the second term is the interaction of particles\nwith a uniform background with charge density\n$\\rho_B = -\\frac{1}{2\\pi l_B^2}$. To minimize the energy, particles\nwould like to spread out in the space and neutralize the background\ncharge. Thus we have a particle density of $n = \\frac{1}{2\\pi m l_B^2}$,\nwhich is exactly the same as what we have found before.\n\n## Excitation states: quasi-holes and qusi-particles\n\nTo this end, we have already discussed the ground state of $\\nu=1/m$\nquantum Hall systems but not their excitations. Now we consider\nquasi-hole excitations and their wave functions, which are easily\nconstructed. On the other hand, we would not discuss quasi-particle wave\nfunctions since they have not been exactly shown in the literature in a\nsimple way.\n\nThe wave function for a quasi-hole excitation at position\n$\\eta \\in \\mathbb{C}$ is given by \n$$\n    \\psi(z_i) = \\prod_{i=1}^N (z_i-\\eta) \\prod_{k<l}(z_k-z_l)^m e^{-\\sum_{i=1}^N |z_i|^2/4l_B^2}\n$$ \nIf there are $M$ quasi-hole excitations at positions\n$\\eta_1,\\ldots,\\eta_M$, the wave function is given by \n$$\n    \\psi(z_i) = \\prod_{i=1}^N \\prod_{j=1}^M (z_i-\\eta_j) \\prod_{k<l}(z_k-z_l)^m e^{-\\sum_{i=1}^N |z_i|^2/4l_B^2}\n$$ \nA heuristic way to understand that the quasi-hole\ncarries a charge of $\\frac{e}{m}$ is that we could place $m$ quasi-holes\nat the same position $\\eta$, where we have defined that electrons carry\na charge of $-e$. The wave function in this case is given by\n$$\n    \\psi(z_i) = \\prod_{i=1}^N (z_i-\\eta)^m \\prod_{k<l}(z_k-z_l)^m e^{-\\sum_{i=1}^N |z_i|^2/4l_B^2}\n$$ \nwhich is exactly the same as the original Laughlin wave\nfunction with an additional electron at position $\\eta$ if we promote\n$\\eta$ to be a dynamical variable. However, $\\eta$ is just a parameter\nin\n[\\[eq:quasi_hole_single\\]](#eq:quasi_hole_single){reference-type=\"eqref\"\nreference=\"eq:quasi_hole_single\"} and\n[\\[eq:quasi_hole_m\\]](#eq:quasi_hole_m){reference-type=\"eqref\"\nreference=\"eq:quasi_hole_m\"}, thus they have a fractional charge of\n$\\frac{e}{m}$.\n\n## Topology behind fractional quantum Hall effect\n\nIn the first section\u00a0[4](#sec:IQHE){reference-type=\"ref\"\nreference=\"sec:IQHE\"}, we have already relate the integer quantum Hall\neffect with its deeply hidden topology. A natural question is whether we\ncan also find the topological nature of fractional quantum Hall effect.\nThe two stories are quite different as we have already seen. But the\nanswer should certainly be yes and we will give a brief discussion here.\n\nLet us first discuss the statistics of quantum particles in 2d space. In\nthe usual 3d space, we have two types of particles in quantum mechanics,\nbosons and fermions, which pick up a phase of $1$ and $-1$ when we\nexchange two identical particles, respectively. However, in 2d space, we\ncan have more general statistics, which is called *anyonic statistics*.\nThat is, when we exchange two identical particles, the wave function\nwould pick up a phase of $e^{i\\theta}$ where $\\theta$ can be any value\nin $[0,2\\pi)$.\n\nConsider two identical particles rotate in two different directions. In\nthe first case they exchange positions twice in an anti-clockwise\ndirection. In the second case in a clockwise direction. If one inspect\ntheir worldlines, one would find that the two configurations could not\nbe continuously deformed from one to the other. That is, although the\nmolulus square is the same, the wave function may have a memory from\nwhat they experienced. \n$$\n    \\psi(\\mathbf{r_1},\\mathbf{r_2}) = e^{i\\theta}\\psi(\\mathbf{r_2},\\mathbf{r_1})\n$$ \nwhere $\\theta$ is not required to be $0$ or $\\pi$,\ninstead it can be any value in $[0,2\\pi)$. This is so called *quantum\nstatistics* or *fractional statistics*.\n\n## Further results\n\nThere are other fractions that are not of the form $\\nu=\\frac{1}{m}$\nfound in experiements. They can be understood in a similar manner from\nprevious discussion.\n\n# Quantum Hall Effect From Chern-Simons Theory\n\nIn this section, I briefly summarize how can we get quantum Hall effect\nfrom a field theory view. We integrate over all degrees of freedom and\nare left with external gauge fields $A_\\mu$ and emergent gauge fields\n$a_\\mu$. The lowest order allowed in $2+1 d$ is given by Chern-Simons\nterm.\n\n## Integer Quantum Hall Effect\n\nWe first investigate how to describe integer quantum Hall effect using\nChern-Simons theory. It is assumed that we integrate over all internal\ndegrees of freedom and only an effective action for $A_\\mu$ is left. We\nassume that translation symmetry and rotation symmetry are still\npreserved, however parity and time reversal symmetry are both broken. As\nwe are now in $2+1 d$ spacetime, the lowest order term is given by\nChern-Simons term \n$$\n    S_{\\text{CS}} = \\frac{k}{4\\pi}\\int d^3x A\\wedge dA = \\frac{k}{4\\pi}\\int d^3x \\epsilon^{\\mu\\nu\\rho}A_{\\mu}\\partial_\\nu A_{\\rho}\n$$ \nThen the electromagnetic current is given by varying\nthe action with respect to the field, \n$$\n    J^\\mu = \\frac{\\delta S}{\\delta A_\\mu} = \\frac{k}{2\\pi} \\epsilon^{\\mu\\nu\\rho}\\partial_\\nu A_{\\rho}\n$$ \nwhere current conservation is satisfied automatically.\nThe time component is given by \n$$\n    J^0 = \\frac{k}{2\\pi} \\epsilon^{0\\nu\\rho}\\partial_\\nu A_{\\rho} = \\frac{k}{2\\pi}B.\n$$ \nthat is, if we add external magnetic field on the\nmaterial, there would be induced charge from the magnetic field. At the\nsame time, spatial components are computed by\n$$\n    J^i = \\frac{k}{2\\pi} \\epsilon^{ij}E_j\n$$ \nand Hall conductivity is easily read from above\nequation \n$$\n    \\sigma_{xy} = \\frac{k}{2\\pi}\n$$ \nUp to now we haven't shown why this is quantized, which\nneeds a more careful study of self-consistence of Chern-Simons theory.\nFirstly, we want this theory to be gauge-invariant. Let\n$A_\\mu\\to A_\\mu + \\partial_\\mu\\omega$, then the variation of the action is \n$$\n    S_{\\text{CS}} \\to S_{\\text{CS}} + \\frac{k}{4\\pi} \\int d\\omega\\wedge dA = S_{\\text{CS}} + \\frac{k}{4\\pi} \\int d(\\omega\\wedge dA).\n$$ \nThe boundary term vanishes if we put overselves on a\nnon-compact spacetime and consider transform near identity, which mean\n$\\omega(x)\\to 0$ as $x\\to\\infty$. However if this is considered to be a\npartition function with periodicity $\\beta$, we may introduce *large\ngauge transformations*. Now $\\omega$ is nolonger required to be\nsingle-valued, we only want $e^{ie\\omega/\\hbar}$ to be single-valued as\none move from $\\tau=0\\to\\tau=\\beta$. This implies a holonomy in $S^1$\ntime direction is possible \n$$\n    \\omega = \\frac{2\\pi\\hbar\\tau}{e\\beta}.\n$$ \nAnd $A_0$ can be thought as a periodic variable with\nperiodicity $\\frac{2\\pi\\hbar}{e\\beta}$. Apart from time direction, we\ncould also make the spatial directions compact, that is $\\mathbf{S}^2$\ninstead of $\\mathbf{R}^2$. And a background magnetic flux is imposed,\n$$\n    \\frac{1}{2\\pi}\\int_{\\mathbf{S}^2}dA = \\frac{\\hbar}{e}\n$$ \nIf we assume a constant $A_0=a$, then Chern-Simons\naction is calculated easily \n$$\n    S_{\\text{CS}} = \\frac{k}{2\\pi} \\int d^3x A_0F_{12} = \\frac{ka\\beta\\hbar}{e}\n$$ \nwhile $e^{iS_{\\text{CS}}/\\hbar}$ is required to be\nsingle-valued as $A_0\\to A_0+ \\frac{2\\pi\\hbar}{\\beta e}$, thus\n$$\n    \\frac{k\\hbar}{e^2} = \\nu\\in \\mathbf{Z}\n$$ \nIn all, the Hall conductivity is required to be\nquantized \n$$\n    \\sigma_{xy} = \\frac{e^2}{2\\pi\\hbar}\\nu\n$$\n\n## Fractional Quantum Hall Effect\n\nAs we move from the first full filling Laudau level to partial filling\nLaudau level, there the low-energy physics should be treated more\ncarefully. We can no longer assume all bulk degrees of freedom are\nintegrated out, however, some of them must be collected to form a new\ntopological degree of freedom, that is, we have an emergent gauge field\n$a_\\mu$.\n\nThe goal is to write down the effective action\n$S_{\\text{eff}}[a_\\mu,A_\\mu]$. And we want to couple those two different\ngauge fields. As what we did in the former subsection, following form of\ncurrent is possible \n$$\n    J^\\mu = \\frac{1}{2\\pi} \\epsilon^{\\mu\\nu\\rho}\\partial_\\nu a_{\\rho}\n$$ \nThen if we include both the dynamics of emergent field\nand coupling with external field, the action is given by\n$$\n    S_{\\text{eff}}[a_\\mu,A_\\mu] = \\int d^3x \\frac{1}{2\\pi}A\\wedge da - \\frac{m}{4\\pi} A\\wedge dA\n$$\n"; /* MD_END */
-  document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('note-content').innerHTML = marked.parse(__md);
-    if (window.renderMathInElement) {
-      renderMathInElement(document.getElementById('note-content'), {
-        delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
-          {left: '\\[', right: '\\]', display: true},
-          {left: '\\(', right: '\\)', display: false}
-        ],
-        throwOnError: false
-      });
-    }
-  });
 </script>
 
 </body>
