@@ -26,7 +26,7 @@ $$\sigma^- = \frac{1}{2}(X-iY) \quad \sigma^+ = \frac{1}{2}(X+iY)$$
 
 Parent Hamiltonian defines an energy framework that ground state
 represents error-free states. In the case of a three-qubit repetition
-code, the parent Hamiltonian is 
+code, the parent Hamiltonian is
 
 $$
 
