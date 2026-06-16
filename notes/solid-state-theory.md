@@ -2,7 +2,8 @@
 
 ## Some Conventions
 
-$$X = \begin{bmatrix}
+$$
+X = \begin{bmatrix}
         0 & 1\\
         1 & 0\\
     \end{bmatrix}
@@ -15,10 +16,14 @@ $$X = \begin{bmatrix}
     Z = \begin{bmatrix}
         1 & 0\\
         0 & -1\\
-    \end{bmatrix}$$ 
+    \end{bmatrix}
+$$ 
+
     The spin lowing and raising operators are defined by
 
-$$\sigma^- = \frac{1}{2}(X-iY) \quad \sigma^+ = \frac{1}{2}(X+iY)$$
+$$
+\sigma^- = \frac{1}{2}(X-iY) \quad \sigma^+ = \frac{1}{2}(X+iY)
+$$
 
 ## Quantum Error Correction
 
@@ -29,9 +34,7 @@ represents error-free states. In the case of a three-qubit repetition
 code, the parent Hamiltonian is
 
 $$
-
     H = -J(Z_1Z_2+Z_2Z_3)
-
 $$
 
 where $Z_1Z_2$ and $Z_2Z_3$ are called *stabilizers*.
@@ -50,12 +53,10 @@ two logical operators differ from each other only by a multiplication of
 stablizers, they are equivalent. In our case, 
 
 $$
-
     \begin{aligned}
         \bar{X} = X_1X_2X_3 : \bar{X}\ket{0} = \ket{1} \quad \bar{X}\ket{1} = \ket{0} \\
         \bar{Z} = Z_i : \bar{Z}\ket{0} = \ket{0} \quad \bar{Z}\ket{1} = -\ket{1}\\
     \end{aligned}
-
 $$
 
 ::: tcolorbox
@@ -77,9 +78,7 @@ AKLT model, named after Affleck-Kennedy-Lieb-Tasaki, is defined by
 following Hamiltonian 
 
 $$
-
     H = \sum_i\left[\vec{S}_i\cdot\vec{S}_{i+1} + \frac{1}{3} (\vec{S}_i\cdot\vec{S}_{i+1})^2\right]
-
 $$ 
 
 The exact form could be thought as any two adjacent
@@ -95,26 +94,20 @@ parameters running up to a phase factor. We define the energy eigenstate
 in the paramter space as 
 
 $$
-
     H(\vec{R})\ket{n(\vec{R})} = E_n(\vec{R})\ket{n(\vec{R})}
-
 $$ 
 
 Therefore we write the evolving state as
 
 $$
-
     \ket{\psi(t)} = e^{-\theta(t)}\ket{n(\vec{R}(t))}
-
 $$ 
 
 Compute the Shrödinger equation with adiabatic ansatz,
 we find the differential equation satisfied by phase factor,
 
 $$
-
     E_n(\mathbf{R}(t))-i \hbar\langle n(\mathbf{R}(t))| \frac{d}{d t}|n(\mathbf{R}(t))\rangle=\hbar \frac{d \theta(t)}{d t} .
-
 $$ 
 
 Integrate with time, we find there are two different
@@ -123,9 +116,7 @@ arises from the geometry of parameter space. We are mostly intereted in
 the second one, which is so-called *Berry phase*. 
 
 $$
-
     \gamma_n = i\int_0^t dt' \bra{n(\vec{R}(t'))}\frac{d}{dt'}\ket{n(\vec{R}(t'))}
-
 $$ 
 
 This motivates the definition of *Berry connection*,
@@ -133,9 +124,7 @@ which is defined as a one-form on the parameter space of the quantum
 system. 
 
 $$
-
     \mathbf{A}_n(\mathbf{R}) = i\bra{n(\mathbf{R})}\nabla_{\mathbf{R}}\ket{n(\mathbf{R})}
-
 $$ 
 
 Clearly, this is not gauge-invariant, where we have
@@ -182,16 +171,13 @@ only shifts enegies by a constant. We parametrized $\mathbf{d}$ in
 spherical coordinate 
 
 $$
-
     \mathbf{d}(\mathbf{R}) = |{d}|(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)
-
 $$ 
 
 A convenient choice of eigenstates with energies
 $\pm |d|$ is 
 
 $$
-
     \ket{+\mathbf{R}} = 
     \begin{pmatrix}
         \cos\frac{\theta}{2}\\
@@ -203,7 +189,6 @@ $$
         \sin\frac{\theta}{2}e^{-i\phi}\\
         -\cos\frac{\theta}{2}
     \end{pmatrix}
-
 $$ 
 
 However, such choice of eigenstates is not well-defined
@@ -214,9 +199,7 @@ curvature is easy to compute and one can show it takes the same form
 even we change from one patch to the other, 
 
 $$
-
     F_{\theta\phi} = \frac{1}{2}\sin\theta.
-
 $$
 
 Generally, if we take the Cartesian coordinate system and choose
@@ -225,9 +208,7 @@ Assume that at a specific time, $\mathbf{R}$ is along z-direction and
 choose eigenstates to be the usual ones, satisfying 
 
 $$
-
     \sigma_z\ket{+} = \ket{+} \quad \sigma_z\ket{-} = -\ket{-}
-
 $$ 
 
 Then $\mathbf{V}_+$ is computed by
@@ -246,27 +227,21 @@ Quantum Hall effect is that one finds that a material's Hall resistivity
 takes special value 
 
 $$
-
     \rho_{xy} = \frac{2\pi\hbar}{e^2} \frac{1}{\nu} \quad \nu\in \mathbb{Z}
-
 $$ 
 
 If we compare this result with the classical
 calculation in Drude model, in which the resistivity is found to be,
 
 $$
-
     \rho_{xy} = \frac{B}{ne}
-
 $$ 
 
 where $B$ is the external magnetic field and $n$ is the
 electron density, one readily finds that on the $\nu$-th plateau,
 
 $$
-
     n = \frac{B}{\Phi_0}\nu
-
 $$ 
 
 where $\Phi_0 = \frac{2\pi\hbar}{e}$ is the flux
@@ -291,9 +266,7 @@ the impurity is not that much, so that the typical value of the random
 potential is much smaller compared with the gap, 
 
 $$
-
     V \ll \hbar\omega_B.
-
 $$ 
 
 Intuitively, this potential would not change the
@@ -317,9 +290,7 @@ far away from its original position. We can easily see the emergence of
 localized states at the classical level. We assume that
 
 $$
-
     |\nabla V| \ll \frac{\hbar\omega_B}{l_B}
-
 $$ 
 
 where $l_B$ is the magnetic radius. Recall that if we
@@ -328,13 +299,11 @@ orbit $(X,Y)$. One could again compute the commutator of them with the
 full Hamiltonian, 
 
 $$
-
     \begin{aligned}
         i \hbar \dot{X} & =[X, H+V]=[X, V]=[X, y] \frac{\partial V}{\partial y}=i l_B^2 \frac{\partial V}{\partial y} \\
         i \hbar \dot{Y} & =[Y, H+V]=[Y, V]=[Y, x] \frac{\partial V}{\partial x}=-i l_B^2 \frac{\partial V}{\partial x}
-\end{aligned}
-
-$$ 
+    \end{aligned}
+$$
 
 which means the center would move along the direction
 of equipotentials. So why this means we have localized states and
@@ -391,17 +360,13 @@ as $\mathcal{O}(t)=e^{iH_0t/\hbar}\mathcal{O}(0)e^{-iH_0t/\hbar}$ and
 states evolve by 
 
 $$
-
     \ket{\psi(t)}_I = U(t,t_0)\ket{\psi(t_0)}_I
-
 $$ 
 
 where the evolution operator is defined as
 
 $$
-
     U(t,t_0) = \operatorname{T}\exp(-\frac{i}{\hbar}\int_{t_0}^tdt' \Delta H(t'))
-
 $$ 
 
 where $\operatorname{T}$ stands for the time ordering.
@@ -409,13 +374,11 @@ The computation is staightford. Suppose that we prepare our state in the
 many-body ground state $\ket{0}$ in the far-past, 
 
 $$
-
     \begin{aligned}
         \langle{\mathbf{J}(t)\rangle} &= \bra{0(t)}\mathbf{J}(t)\ket{0(t)} \\ 
         & = \bra{0}U^{-1}(t)\mathbf{J}(t)U(t)\ket{0} \\
         & \approx \bra{0}\mathbf{J}(t) + \frac{i}{\hbar}\int_{-\infty}^{t}dt' [\Delta H(t'), \mathbf{J}(t)]\ket{0}
     \end{aligned}
-
 $$ 
 
 where $U(t)$ is the abbreviation of evolution operator
@@ -424,17 +387,14 @@ order in the last step. Each component can be shown to be brought to
 following form 
 
 $$
-
     \braket{J_i(t)}=-\frac{1}{\hbar \omega}\left(\int_0^{\infty} d t^{\prime \prime} e^{i \omega t^{\prime \prime}}\langle 0|\left[J_j(0), J_i\left(t^{\prime \prime}\right)\right]|0\rangle\right) E_j e^{-i \omega t}.
-
 $$ 
+
 From the above formula, it is clear that the diagonal
 component of condutivity is $0$ and the off-diagonal components is
 
 $$
-
     \sigma_{xy}(\omega) = -\frac{1}{\hbar \omega}\left(\int_0^{\infty} d t e^{i \omega t}\langle 0|\left[J_j(0), J_i\left(t\right)\right]|0\rangle\right).
-
 $$ 
 
 This is the *Kubo formula* of Hall conductivity. Use
@@ -445,9 +405,7 @@ make the integral convergent, $\omega \to \omega + i\epsilon$. The final
 result is 
 
 $$
-
     \sigma_{xy}(\omega) = \frac{i}{\omega}\sum_{n\neq 0} \frac{\bra{0}J_y\ket{n}\bra{n}J_x\ket{0}}{E_n - E_0 + \hbar \omega } - \frac{\bra{0}J_x\ket{n}\bra{n}J_y\ket{0}}{\hbar \omega-E_n + E_0}.
-
 $$ 
 
 Expand around $\omega\to 0$ and throw away the
@@ -455,9 +413,7 @@ divergent part(which would be important for the longitudinal
 conductivity however we are not going to discuss it here), we have
 
 $$
-
     \sigma_{x y}=-i \hbar \sum_{n \neq 0} \frac{\langle 0| J_y|n\rangle\langle n| J_x|0\rangle-\langle 0| J_x|n\rangle\langle n| J_y|0\rangle}{\left(E_n-E_0\right)^2}
-
 $$
 
 Now we are ready to discuss the topological nature of quantum Hall
@@ -468,9 +424,7 @@ the existence of magnetic field. We introduce the *magnetic translation
 operators*, 
 
 $$
-
     T(\mathbf{d}) = \exp(i\mathbf{d}\cdot (-i\nabla - e\mathbf{A}/\hbar)).
-
 $$ 
 
 We require that the state is invariant under the
@@ -483,9 +437,7 @@ $T_y = \exp(y\partial_y - iyeBx/\hbar)$. That means when we move around
 a circle along $y$-direction, the wave function would pick up a phase
 
 $$
-
     T(0,L_y)\psi(x,y) = \exp(-ieBxL_y/\hbar)\psi(x,y+L_y) = \psi(x,y).
-
 $$ 
 
 However, we find that
@@ -494,9 +446,7 @@ translation operators do not commute with each other. To make them
 commute, we require the factor to be a multiple of $2\pi$,
 
 $$
-
     \frac{eBL_xL_y}{\hbar} = 2\pi N \quad N \in \mathbb{Z},
-
 $$ 
 
 which give rise to the Dirac quantization condition for
@@ -504,12 +454,10 @@ magnetic flux. It is again easy to see that we could perturb the
 Hamiltonian by adding constant magnetic flux along two directions.
 
 $$
-
     \begin{aligned}
         & A_x = \frac{\Phi_x}{L_x} \\
         & A_y = \frac{\Phi_y}{L_y} + Bx
     \end{aligned}
-
 $$ 
 
 The addition Hamiltonian is
@@ -517,9 +465,7 @@ $\Delta = - \sum\limits_{i=x,y}\frac{J_i\Phi_i}{L_i}$. Then to the first
 order in the perturbation theory, the energy eigenstates ara given by
 
 $$
-
     \ket{\psi_0}' = \ket{\psi_0} + \sum_{n\neq \psi_0} \frac{\bra{n}\Delta H\ket{\psi_0}}{E_n-E_0}\ket{n}
-
 $$ 
 
 Consider infinitesimal changes of $\Phi_i$, and we
@@ -528,9 +474,7 @@ that the right-handed side takes the form of Kubo formula. In all, the
 Kubo formula for Hall conductivity can be written as 
 
 $$
-
     \sigma_{xy} = -i\hbar \left[\frac{\partial }{\partial \Phi_y}\bra{\psi_0}\ket{\frac{\partial \psi_0}{\partial \Phi_x}} - \frac{\partial }{\partial \Phi_x}\bra{\psi_0}\ket{\frac{\partial \psi_0}{\partial \Phi_y}}\right]
-
 $$ 
 
 Again, we surprisingly find that it takes a very
@@ -544,27 +488,21 @@ If we define the Berry connection which, in this case, lives over
 $\mathbf{T}_{\Phi}^2$, by 
 
 $$
-
     \mathcal{A}_i = -i \bra{\psi_0} \frac{\partial }{\partial \theta_i} \ket{\psi_0}.
-
 $$ 
 
 The field strength can be easily computed and can be
 shown to be directly related with Hall conductivity 
 
 $$
-
     \sigma_{xy} = -\frac{e^2}{\hbar}\mathcal{F}_{xy}
-
 $$ 
 
 To see why the Hall conductivity is quantized, one
 needs to average over the parameter space 
 
 $$
-
     \sigma_{xy} = -\frac{e^2}{\hbar} \int_{\mathbf{T}_{\Phi}^2}\frac{d^2\theta}{(2\pi)^2}\mathcal{F}_{xy}
-
 $$ 
 
 However an integral of curvature over the space is
@@ -572,17 +510,13 @@ always a integer, which is called **Chern number**. Here the Chern
 number is defined by 
 
 $$
-
     C = -\frac{1}{2\pi} \int_{\mathbf{T}_{\Phi}^2}\frac{d^2\theta}{(2\pi)^2}\mathcal{F}_{xy} \quad \text{and} \quad C\in\mathbb{Z}
-
 $$ 
 
 The Hall conductivity is thus quantized
 
 $$
-
     \sigma_{xy} = \frac{e^2}{2\pi\hbar} C
-
 $$ 
 
 The
@@ -602,7 +536,9 @@ physical obervable conductivity.
 We briefly discuss Laughlin's argument for quantized Hall effect. We
 adopt Laudau's gauge 
 
-$$A = (0,Bx,0)$$
+$$
+A = (0,Bx,0)
+$$
 
 In this gauge, the translation symmetry in $y$-direction is preserved
 and $k_y$ is a good quantum number. It can be shown that the eigenstates
@@ -612,27 +548,21 @@ of occillators in $x$-direction, $\braket{x} = -l^2 k_y$. Once we impose
 periodic boundary condition in $y$-direction, $k_y$ is quantized
 
 $$
-
 k_y = \frac{2\pi n}{L_y}
-
 $$
 
 We also have a finite length in
 $x$-direction, say $L_x$, then degeneracy of a Laudau level is given by
 
 $$
-
-N = \frac{\Delta k_y}{\delta k_y} = \frac{L_x/l^2}{2\pi/L_y} = \frac{A}{2\pi l^2} = \frac{AB}{\Phi_0}
-
+    N = \frac{\Delta k_y}{\delta k_y} = \frac{L_x/l^2}{2\pi/L_y} = \frac{A}{2\pi l^2} = \frac{AB}{\Phi_0}
 $$
 
 If we adiabatically increase flux in $z$-direction, which means
 $A_y = Bx + \frac{\Phi}{L_y}$, then
 
 $$
-
 \langle x \rangle = -l^2(k_y + \frac{e\Phi}{\hbar L_y}) = -\frac{2\pi l^2}{L_y}(n + \frac{\Phi}{\Phi_0})
-
 $$
 
 from which we find that if we add one unit of flux, the position of
@@ -673,9 +603,7 @@ $k+G$, and the momentum space should modulo out such a translation. One
 may take 
 
 $$
-
-        k \in [-\frac{\pi}{a},\frac{\pi}{a})
-
+    k \in [-\frac{\pi}{a},\frac{\pi}{a})
 $$ 
 
 as the first Brillouin zone.*
@@ -689,9 +617,7 @@ $k_x\sim k_x+ \frac{2\pi}{a}$ and $k_y\sim k_y+ \frac{2\pi}{b}$. In a
 given band, the wave function can be brought to the Bloch form
 
 $$
-
     \psi_{\mathbf{k}}(\mathbf{x}) = e^{i\mathbf{k}\cdot \mathbf{x}}u_{\mathbf{k}}(\mathbf{x})
-
 $$ 
 
 where $u_{\mathbf{k}}(\mathbf{x})$ is usually periodic
@@ -714,9 +640,7 @@ For each bands that below the Fermi energy, we can do the same thing as
 above. For each band there exist a Berry connection defined as
 
 $$
-
     \mathcal{A}_i(\mathbf{k}) = -i \bra{u_{\mathbf{k}}} \frac{\partial }{\partial k_i} \ket{u_{\mathbf{k}}}.
-
 $$ 
 
 Here the connection is defined in the Hilber space
@@ -725,18 +649,14 @@ story goes in the usual sense. The Berry curvature associate with
 $\mathcal{A}_i$ is 
 
 $$
-
     \mathcal{F}_{x y}=\frac{\partial \mathcal{A}_y}{\partial k^x}-\frac{\partial \mathcal{A}_x}{\partial k^y}=i\left\langle\left.\frac{\partial u}{\partial k^y} \right\rvert\, \frac{\partial u}{\partial k^x}\right\rangle-i\left\langle\left.\frac{\partial u}{\partial k^x} \right\rvert\, \frac{\partial u}{\partial k^y}\right\rangle
-
 $$ 
 
 For each band $\alpha$ there is an associate Chern
 number and the Hall conductivity is given by a summation
 
 $$
-
     \sigma_{xy} = \frac{e^2}{2\pi\hbar}\sum_\alpha C_\alpha
-
 $$
 
 ::: proof
@@ -753,12 +673,10 @@ Let us look at the Schödinger equation of Bloch wave function, which
 reads 
 
 $$
-
         \begin{aligned}
             H\left|\psi_{\mathbf{k}}\right\rangle=E_{\mathbf{k}}\left|\psi_{\mathbf{k}}\right\rangle & \Rightarrow\left(e^{-i \mathbf{k} \cdot \mathbf{x}} H e^{i \mathbf{k} \cdot \mathbf{x}}\right)\left|u_{\mathbf{k}}\right\rangle=E_{\mathbf{k}}\left|u_{\mathbf{k}}\right\rangle \\
             & \Rightarrow \tilde{H}(\mathbf{k})\left|u_{\mathbf{k}}\right\rangle=E_{\mathbf{k}}\left|u_{\mathbf{k}}\right\rangle \quad \text { with } \quad \tilde{H}(\mathbf{k})=e^{-i \mathbf{k} \cdot \mathbf{x}} H e^{i \mathbf{k} \cdot \mathbf{x}}
         \end{aligned}
-
 $$ 
 
 The current operator is defined in terms of the group
@@ -768,14 +686,12 @@ One can check that this perfectly match $\mathbf{J}=e\dot{\mathbf{x}}$.
 Now we are left with algebraric calculation 
 
 $$
-
         \begin{aligned}
             \sigma_{xy} &= -i\hbar \sum_{E_\alpha<E_F<E_\beta}\int_{\mathbf{T}^2}\frac{d^2k}{(2\pi)^2} \frac{\bra{u_{\alpha}^\mathbf{k}}J_y\ket{u_{\beta}^\mathbf{k}}\bra{u_{\beta}^\mathbf{k}}J_x\ket{u_{\alpha}^\mathbf{k}}-\bra{u_{\alpha}^\mathbf{k}}J_x\ket{u_{\beta}^\mathbf{k}}\bra{u_{\beta}^\mathbf{k}}J_y\ket{u_{\alpha}^\mathbf{k}}}{(E_\alpha(\mathbf{k})-E_\beta(\mathbf{k}))^2} \\
             &= -i\frac{e^2}{\hbar} \sum_{E_\alpha<E_F<E_\beta}\int_{\mathbf{T}^2}\frac{d^2k}{(2\pi)^2} \frac{\bra{u_{\alpha}^\mathbf{k}}\partial_y \tilde{H}\ket{u_{\beta}^\mathbf{k}}\bra{u_{\beta}^\mathbf{k}}\partial_x \tilde{H}\ket{u_{\alpha}^\mathbf{k}}-\bra{u_{\alpha}^\mathbf{k}}\partial_x \tilde{H}\ket{u_{\beta}^\mathbf{k}}\bra{u_{\beta}^\mathbf{k}}\partial_y \tilde{H}\ket{u_{\alpha}^\mathbf{k}}}{(E_\alpha(\mathbf{k})-E_\beta(\mathbf{k}))^2} \\
             &= -i\frac{e^2}{\hbar} \sum_{E_\alpha<E_F<E_\beta}\int_{\mathbf{T}^2}\frac{d^2k}{(2\pi)^2} \braket{\partial_y u_{\alpha}^\mathbf{k}}{u_{\beta}^\mathbf{k}}\braket{u_{\beta}^\mathbf{k}}{\partial_x u_{\alpha}^\mathbf{k}}-\braket{\partial_x u_{\alpha}^\mathbf{k}}{u_{\beta}^\mathbf{k}}\braket{u_{\beta}^\mathbf{k}}{\partial_y u_{\alpha}^\mathbf{k}} \\
             &= -i\frac{e^2}{\hbar} \sum_{\alpha}\int_{\mathbf{T}^2}\frac{d^2k}{(2\pi)^2} \braket{\partial_y u_{\alpha}^\mathbf{k}}{\partial_x u_{\alpha}^\mathbf{k}}-\braket{\partial_x u_{\alpha}^\mathbf{k}}{\partial_y u_{\alpha}^\mathbf{k}}
         \end{aligned}
-
 $$ 
 
 Compare the integrand with the definition of Berry
@@ -791,9 +707,7 @@ The simplest case is following single-particle Hamiltonian (in the
 momentum space) 
 
 $$
-
     \tilde{H}(\mathbf{k}) = \vec{E}(\mathbf{k})\cdot \vec{\sigma} + \epsilon(\mathbf{k})\mathbf{1}
-
 $$ 
 
 There are only two bands, each with energy
@@ -804,9 +718,7 @@ Clearly this induces a map from $\mathbf{T}^2\to\mathbf{S}^2$. Then the
 Chern number for this system could be written as 
 
 $$
-
     C = \frac{1}{4\pi}\int_{\mathbf{T}^2}k \vec{n}\cdot (\frac{\partial \vec n}{\partial k_x}\times\frac{\partial \vec n}{\partial k_y})
-
 $$ 
 
 This formula effectively measures how many times
@@ -830,9 +742,7 @@ physics around small momentum region, the Hamiltonian necessarily looks
 like 
 
 $$
-
     H = \sin (k_x) \sigma_x + \sin (k_y) \sigma_y + B(2+M-\cos(k_x)-\cos(k_y))\sigma_z,
-
 $$ 
 
 to the lowest order of Fourier modes.
@@ -861,9 +771,7 @@ topological phases. For spinless systems, time reversal symmetry acting
 on Bloch Hamiltonian as simply changing the sign of momentum
 
 $$
-
     T h(\mathbf{k}) T^{-1} = h(-\mathbf{k})
-
 $$ 
 
 Then, if $\ket{\psi(\mathbf{k})}$ is an eigenstate at
@@ -886,9 +794,7 @@ proposed an exact form of multi-particle wavefunction and obtained the
 fractional Laudau level, 
 
 $$
-
     \nu = \frac{1}{m}, \quad , m\in\mathbb{Z}
-
 $$ 
 
 Actually, $m$ is an odd integer due to the Fermi-Dirac
@@ -897,9 +803,7 @@ each Laudau level, the wavefunction may take the following form when
 working in the symmetric gauge 
 
 $$
-
     \psi(z_1,\ldots,z_n)= f(z_1,\ldots,z_n)e^{-\sum_{i=1}^N |z_i|^2/4l_B^2}
-
 $$ 
 
 where $z_i$ is defined as the holomorphic coordinate
@@ -907,9 +811,7 @@ for each particle. Laughlin proposed that the ground state wavefunction
 for Laudau level $\nu=\frac{1}{m}$ is: 
 
 $$
-
     \psi(z_i) = \prod_{i<j}(z_i-z_j)^m e^{-\sum_{i=1}^N |z_i|^2/4l_B^2}
-
 $$ 
 
 This is anti-symmetric when $m$ is odd. For even $m$,
@@ -920,9 +822,7 @@ to a fractional Laudau level. Let us focus on one single particle, say
 $z_1$. Then in the pre-factor, terms containing $z_1$ are
 
 $$
-
     \prod_{i=1}^N(z_1-z_i)^m \sim z_1^{m(N-1)}
-
 $$ 
 
 Thus from what we see from the single-particle
@@ -932,9 +832,7 @@ $A=\pi R^2 = 2\pi mNl_B^2$. Each Laudau level contains $AB/\Phi_0=mN$.
 So states only fill a fraction of Laudau level with 
 
 $$
-
     \nu = \frac{1}{m}
-
 $$ 
 
 as we expected.
@@ -952,17 +850,13 @@ wavefunction. Consider the number density in the ground state, which is
 given by computing the expectation value of 
 
 $$
-
     n(z) = \sum_{i=1}^N \delta(z-z_i)
-
 $$ 
 
 And this is given by 
 
 $$
-
     \langle n(z)\rangle = \frac{\int \prod_{i=1}^N d^2z_i n(z) |\psi(z_i)|^2}{\int \prod_{i=1}^N d^2z_i |\psi(z_i)|^2}
-
 $$ 
 
 Here we can interpret it as computing the partition
@@ -970,9 +864,7 @@ function of a classical plasma, where the partition function is defined
 by 
 
 $$
-
     Z = \int \prod_{i=1}^N d^2z_i |\psi(z_i)|^2 = \int \prod_{i=1}^N d^2z_i \prod_{i<j} |z_i-z_j|^{2m} e^{-\sum_{i=1}^N |z_i|^2/2l_B^2}
-
 $$ 
 
 However for future convenience and a better physical
@@ -980,9 +872,7 @@ picture, we should introduce a factor for normalization to make the
 integrand dimensionless, that is 
 
 $$
-
     Z = \int \prod_{i=1}^N d^2z_i \prod_{i<j} \left|\frac{z_i-z_j}{l_B}\right|^{2m} e^{-\sum_{i=1}^N |z_i|^2/2l_B^2}
-
 $$ 
 
 In the usual computation of partition function, the
@@ -990,9 +880,7 @@ integrand is given by $e^{-\beta H}$, so here we can identify the
 effective Hamiltonian as 
 
 $$
-
     \beta H = -2m \sum_{i<j} \log\left|\frac{z_i-z_j}{l_B}\right| + \sum_{i=1}^N \frac{|z_i|^2}{2l_B^2}
-
 $$ 
 
 The first term can be interpreted as the Coulomb
@@ -1001,9 +889,7 @@ interpreted as a confining potential. If we set $\beta = \frac{2}{m}$,
 then the effective Hamiltonian is given by 
 
 $$
-
     H = -m^2 \sum_{i<j} \log\left|\frac{z_i-z_j}{l_B}\right| + \sum_{i=1}^N \frac{m}{4l_B^2}|z_i|^2
-
 $$ 
 
 where each single particle carries a charge $m$. One
@@ -1027,18 +913,14 @@ The wave function for a quasi-hole excitation at position
 $\eta \in \mathbb{C}$ is given by 
 
 $$
-
     \psi(z_i) = \prod_{i=1}^N (z_i-\eta) \prod_{k<l}(z_k-z_l)^m e^{-\sum_{i=1}^N |z_i|^2/4l_B^2}
-
 $$ 
 
 If there are $M$ quasi-hole excitations at positions
 $\eta_1,\ldots,\eta_M$, the wave function is given by 
 
 $$
-
     \psi(z_i) = \prod_{i=1}^N \prod_{j=1}^M (z_i-\eta_j) \prod_{k<l}(z_k-z_l)^m e^{-\sum_{i=1}^N |z_i|^2/4l_B^2}
-
 $$ 
 
 A heuristic way to understand that the quasi-hole
@@ -1047,9 +929,7 @@ at the same position $\eta$, where we have defined that electrons carry
 a charge of $-e$. The wave function in this case is given by
 
 $$
-
     \psi(z_i) = \prod_{i=1}^N (z_i-\eta)^m \prod_{k<l}(z_k-z_l)^m e^{-\sum_{i=1}^N |z_i|^2/4l_B^2}
-
 $$ 
 
 which is exactly the same as the original Laughlin wave
@@ -1089,9 +969,7 @@ molulus square is the same, the wave function may have a memory from
 what they experienced. 
 
 $$
-
     \psi(\mathbf{r_1},\mathbf{r_2}) = e^{i\theta}\psi(\mathbf{r_2},\mathbf{r_1})
-
 $$ 
 
 where $\theta$ is not required to be $0$ or $\pi$,
@@ -1123,27 +1001,21 @@ we are now in $2+1 d$ spacetime, the lowest order term is given by
 Chern-Simons term 
 
 $$
-
     S_{\text{CS}} = \frac{k}{4\pi}\int d^3x A\wedge dA = \frac{k}{4\pi}\int d^3x \epsilon^{\mu\nu\rho}A_{\mu}\partial_\nu A_{\rho}
-
 $$ 
 
 Then the electromagnetic current is given by varying
 the action with respect to the field, 
 
 $$
-
     J^\mu = \frac{\delta S}{\delta A_\mu} = \frac{k}{2\pi} \epsilon^{\mu\nu\rho}\partial_\nu A_{\rho}
-
 $$ 
 
 where current conservation is satisfied automatically.
 The time component is given by 
 
 $$
-
     J^0 = \frac{k}{2\pi} \epsilon^{0\nu\rho}\partial_\nu A_{\rho} = \frac{k}{2\pi}B.
-
 $$ 
 
 that is, if we add external magnetic field on the
@@ -1151,18 +1023,14 @@ material, there would be induced charge from the magnetic field. At the
 same time, spatial components are computed by
 
 $$
-
     J^i = \frac{k}{2\pi} \epsilon^{ij}E_j
-
 $$ 
 
 and Hall conductivity is easily read from above
 equation 
 
 $$
-
     \sigma_{xy} = \frac{k}{2\pi}
-
 $$ 
 
 Up to now we haven't shown why this is quantized, which
@@ -1171,9 +1039,7 @@ Firstly, we want this theory to be gauge-invariant. Let
 $A_\mu\to A_\mu + \partial_\mu\omega$, then the variation of the action is 
 
 $$
-
     S_{\text{CS}} \to S_{\text{CS}} + \frac{k}{4\pi} \int d\omega\wedge dA = S_{\text{CS}} + \frac{k}{4\pi} \int d(\omega\wedge dA).
-
 $$ 
 
 The boundary term vanishes if we put overselves on a
@@ -1186,9 +1052,7 @@ one move from $\tau=0\to\tau=\beta$. This implies a holonomy in $S^1$
 time direction is possible 
 
 $$
-
     \omega = \frac{2\pi\hbar\tau}{e\beta}.
-
 $$ 
 
 And $A_0$ can be thought as a periodic variable with
@@ -1197,36 +1061,28 @@ could also make the spatial directions compact, that is $\mathbf{S}^2$
 instead of $\mathbf{R}^2$. And a background magnetic flux is imposed,
 
 $$
-
     \frac{1}{2\pi}\int_{\mathbf{S}^2}dA = \frac{\hbar}{e}
-
 $$ 
 
 If we assume a constant $A_0=a$, then Chern-Simons
 action is calculated easily 
 
 $$
-
     S_{\text{CS}} = \frac{k}{2\pi} \int d^3x A_0F_{12} = \frac{ka\beta\hbar}{e}
-
 $$ 
 
 while $e^{iS_{\text{CS}}/\hbar}$ is required to be
 single-valued as $A_0\to A_0+ \frac{2\pi\hbar}{\beta e}$, thus
 
 $$
-
     \frac{k\hbar}{e^2} = \nu\in \mathbf{Z}
-
 $$ 
 
 In all, the Hall conductivity is required to be
 quantized 
 
 $$
-
     \sigma_{xy} = \frac{e^2}{2\pi\hbar}\nu
-
 $$
 
 ## Fractional Quantum Hall Effect
@@ -1244,16 +1100,12 @@ gauge fields. As what we did in the former subsection, following form of
 current is possible 
 
 $$
-
     J^\mu = \frac{1}{2\pi} \epsilon^{\mu\nu\rho}\partial_\nu a_{\rho}
-
 $$ 
 
 Then if we include both the dynamics of emergent field
 and coupling with external field, the action is given by
 
 $$
-
     S_{\text{eff}}[a_\mu,A_\mu] = \int d^3x \frac{1}{2\pi}A\wedge da - \frac{m}{4\pi} A\wedge dA
-
 $$
