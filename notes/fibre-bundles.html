@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibre Bundles, Connections & Characteristic Classes — Zheyan Shu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:   #ffffff;
+  --surface: #f8f8f8;
+  --border:  #e8e8e8;
+  --text:    #111111;
+  --muted:   #888888;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'SFMono-Regular', Consolas, monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+.nav-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+.note-header { padding: 72px 0 48px; }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--text); }
+.back-link svg { width: 14px; height: 14px; }
+
+.note-meta {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.note-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.note-abstract {
+  font-size: 16px;
+  color: #3a3a3a;
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.download-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+.download-label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 5px 14px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.download-btn:hover { background: var(--surface); border-color: #bbb; }
+.download-btn svg { width: 13px; height: 13px; opacity: 0.6; }
+
+#note-content {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #2a2a2a;
+  padding-bottom: 96px;
+}
+
+#note-content h1 { display: none; }
+
+#note-content h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 52px 0 18px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+#note-content h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 36px 0 12px;
+  color: var(--text);
+}
+#note-content h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 28px 0 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+#note-content p { margin-bottom: 18px; }
+#note-content p:last-child { margin-bottom: 0; }
+
+#note-content a { color: var(--text); text-underline-offset: 3px; }
+#note-content a:hover { color: var(--muted); }
+
+#note-content ul, #note-content ol {
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+#note-content li { margin-bottom: 6px; }
+
+#note-content blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 20px;
+  color: var(--muted);
+  margin: 24px 0;
+  font-style: italic;
+}
+
+#note-content code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+#note-content pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+#note-content pre code { background: none; border: none; padding: 0; font-size: 13px; }
+
+#note-content .katex-display { margin: 28px 0; overflow-x: auto; }
+
+#note-content hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+#note-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+#note-content th, #note-content td {
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  text-align: left;
+}
+#note-content th { background: var(--surface); font-weight: 500; }
+
+footer { border-top: 1px solid var(--border); padding: 28px 24px; }
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .note-header { padding: 48px 0 32px; }
+  .download-bar { flex-wrap: wrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-name">Zheyan Shu</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#notes">Notes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="note-header">
+    <a href="../index.html#notes" class="back-link">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 2L4 7l5 5"/>
+      </svg>
+      Notes
+    </a>
+    <p class="note-meta">High Energy &nbsp;·&nbsp; 2026</p>
+    <h1 class="note-title">Fibre Bundles, Connections & Characteristic Classes</h1>
+    <p class="note-abstract">A complete study note based on Nakahara's <em>Geometry, Topology and Physics</em>, Chapters 9–11. Covers fibre bundles and transition functions, connections and curvature as Yang–Mills field strength, and the catalogue of topological invariants: Chern, Pontryagin, Euler, and Stiefel–Whitney classes.</p>
+
+    <div class="download-bar">
+      <span class="download-label">Download</span>
+      <a class="download-btn" href="fibre-bundles.md" download>
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M7 2v7M4 6l3 3 3-3M2 11h10"/>
+        </svg>
+        Markdown
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="note-content">
+    <p style="color: var(--muted); font-size: 14px;">Loading…</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>Zheyan Shu</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+  const katexMacros = {
+    '\\ket': '\\left|#1\\right\\rangle',
+    '\\bra': '\\left\\langle#1\\right|',
+    '\\braket': '\\left\\langle#1\\middle|#2\\right\\rangle',
+    '\\ham': '\\mathcal{H}',
+    '\\vect': '\\mathbf{#1}',
+    '\\dd': '\\mathrm{d}',
+    '\\Tr': '\\operatorname{Tr}',
+    '\\tr': '\\operatorname{tr}',
+  };
+
+  const katexOptions = {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$',  right: '$',  display: false},
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    macros: katexMacros,
+    throwOnError: false
+  };
+
+  function renderNote(md) {
+    const mathBlocks = [];
+    md = md.replace(/\$\$[\s\S]*?\$\$/g, m => {
+      mathBlocks.push(m);
+      return `@@MATH${mathBlocks.length - 1}@@`;
+    });
+    md = md.replace(/\$[^\$\n]+?\$/g, m => {
+      mathBlocks.push(m);
+      return `@@MATH${mathBlocks.length - 1}@@`;
+    });
+
+    let html = marked.parse(md);
+    html = html.replace(/@@MATH(\d+)@@/g, (_, i) => mathBlocks[i]);
+
+    document.getElementById('note-content').innerHTML = html;
+    renderMathInElement(document.getElementById('note-content'), katexOptions);
+  }
+
+  fetch('fibre-bundles.md')
+    .then(r => r.text())
+    .then(renderNote);
+</script>
+
+</body>
+</html>
